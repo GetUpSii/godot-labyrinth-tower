@@ -261,7 +261,7 @@
 	  "target": "player",
 	  "display_name_localized": {
 		"zh": "乌诺的魔法手札1",
-		"en": "Uno's Magic Note 1"
+		"en": "Wuno's Magic Note 1"
 	  },
 	  "max_stack": 1,
 	  "description": "其中记载着巫师的魔法",
@@ -278,7 +278,7 @@
 	  "target": "player",
 	  "display_name_localized": {
 		"zh": "乌诺的魔法手札2",
-		"en": "Uno's Magic Note 2"
+		"en": "Wuno's Magic Note 2"
 	  },
 	  "max_stack": 1,
 	  "description": "其中记载着巫师的魔法",

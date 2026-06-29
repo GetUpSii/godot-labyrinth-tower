@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://d23p3u501vksh"]
+[gd_scene load_steps=6 format=3 uid="uid://d23p3u501vksh"]
 
 [ext_resource type="Theme" uid="uid://di7qiqd4p7qg1" path="res://resource/theme/theme.tres" id="1_ivrgc"]
 [ext_resource type="Script" uid="uid://te4ju7525exn" path="res://ui/inventory/shop_ui.gd" id="2_7aq8g"]
@@ -6,8 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://dvpcllty1ey28" path="res://ui/inventory/deal_popup.tscn" id="3_l24c7"]
 [ext_resource type="AudioStream" uid="uid://cce4mc2njj7f1" path="res://asserts/sfx/item/cloth-inventory.wav" id="5_hgtuo"]
 
-[node name="ShopUi" type="PanelContainer" unique_id=245994799]
-auto_translate_mode = 1
+[node name="ShopUi" type="PanelContainer"]
+auto_translate = true
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -22,124 +22,124 @@ grow_vertical = 2
 theme = ExtResource("1_ivrgc")
 script = ExtResource("2_7aq8g")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1707109480]
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=1198117100]
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
 
-[node name="TitleLabel" type="Label" parent="VBoxContainer/HBoxContainer" unique_id=1934306666]
+[node name="TitleLabel" type="Label" parent="VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 16
 text = "商店"
 horizontal_alignment = 1
 
-[node name="CloseButton" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=184903092]
+[node name="CloseButton" type="Button" parent="VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 8
 theme_override_font_sizes/font_size = 16
 text = "X"
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer" unique_id=1584496837]
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="MItemPanelContainer" type="PanelContainer" parent="VBoxContainer/HBoxContainer2" unique_id=948575936]
+[node name="MItemPanelContainer" type="PanelContainer" parent="VBoxContainer/HBoxContainer2"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/HBoxContainer2/MItemPanelContainer" unique_id=376104604]
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/HBoxContainer2/MItemPanelContainer"]
 layout_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer2/MItemPanelContainer/MarginContainer" unique_id=1898526648]
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer2/MItemPanelContainer/MarginContainer"]
 layout_mode = 2
 
-[node name="ShopPanelContainer" type="PanelContainer" parent="VBoxContainer/HBoxContainer2/MItemPanelContainer/MarginContainer/VBoxContainer" unique_id=1154657264]
+[node name="ShopPanelContainer" type="PanelContainer" parent="VBoxContainer/HBoxContainer2/MItemPanelContainer/MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="MerchantScrollContainer" type="ScrollContainer" parent="VBoxContainer/HBoxContainer2/MItemPanelContainer/MarginContainer/VBoxContainer/ShopPanelContainer" unique_id=1662906439]
+[node name="MerchantScrollContainer" type="ScrollContainer" parent="VBoxContainer/HBoxContainer2/MItemPanelContainer/MarginContainer/VBoxContainer/ShopPanelContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 follow_focus = true
 draw_focus_border = true
 
-[node name="MerchantItemContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer2/MItemPanelContainer/MarginContainer/VBoxContainer/ShopPanelContainer/MerchantScrollContainer" unique_id=1117085425]
+[node name="MerchantItemContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer2/MItemPanelContainer/MarginContainer/VBoxContainer/ShopPanelContainer/MerchantScrollContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/HBoxContainer2/MItemPanelContainer/MarginContainer/VBoxContainer" unique_id=1136663485]
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/HBoxContainer2/MItemPanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("3_f7ufc")
 
-[node name="BuyButton" type="Button" parent="VBoxContainer/HBoxContainer2/MItemPanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=68897898]
+[node name="BuyButton" type="Button" parent="VBoxContainer/HBoxContainer2/MItemPanelContainer/MarginContainer/VBoxContainer/HBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 text = "购买"
 
-[node name="MGlodLabel" type="Label" parent="VBoxContainer/HBoxContainer2/MItemPanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=636150708]
+[node name="MGlodLabel" type="Label" parent="VBoxContainer/HBoxContainer2/MItemPanelContainer/MarginContainer/VBoxContainer/HBoxContainer"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
 
-[node name="MerChantItemLaber" type="Label" parent="VBoxContainer/HBoxContainer2/MItemPanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1942384716]
+[node name="MerChantItemLaber" type="Label" parent="VBoxContainer/HBoxContainer2/MItemPanelContainer/MarginContainer/VBoxContainer/HBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 
-[node name="PItemPanelContainer" type="PanelContainer" parent="VBoxContainer/HBoxContainer2" unique_id=1798525039]
+[node name="PItemPanelContainer" type="PanelContainer" parent="VBoxContainer/HBoxContainer2"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/HBoxContainer2/PItemPanelContainer" unique_id=427373606]
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/HBoxContainer2/PItemPanelContainer"]
 layout_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer2/PItemPanelContainer/MarginContainer" unique_id=1445027014]
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer2/PItemPanelContainer/MarginContainer"]
 layout_mode = 2
 
-[node name="ShopPanelContainer" type="PanelContainer" parent="VBoxContainer/HBoxContainer2/PItemPanelContainer/MarginContainer/VBoxContainer" unique_id=1270298575]
+[node name="ShopPanelContainer" type="PanelContainer" parent="VBoxContainer/HBoxContainer2/PItemPanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="PlayerScrollContainer" type="ScrollContainer" parent="VBoxContainer/HBoxContainer2/PItemPanelContainer/MarginContainer/VBoxContainer/ShopPanelContainer" unique_id=32778425]
+[node name="PlayerScrollContainer" type="ScrollContainer" parent="VBoxContainer/HBoxContainer2/PItemPanelContainer/MarginContainer/VBoxContainer/ShopPanelContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 follow_focus = true
 draw_focus_border = true
 
-[node name="PlayerItemContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer2/PItemPanelContainer/MarginContainer/VBoxContainer/ShopPanelContainer/PlayerScrollContainer" unique_id=1692685947]
+[node name="PlayerItemContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer2/PItemPanelContainer/MarginContainer/VBoxContainer/ShopPanelContainer/PlayerScrollContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/HBoxContainer2/PItemPanelContainer/MarginContainer/VBoxContainer" unique_id=1131816769]
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/HBoxContainer2/PItemPanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("3_f7ufc")
 
-[node name="SellButton" type="Button" parent="VBoxContainer/HBoxContainer2/PItemPanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=152178786]
+[node name="SellButton" type="Button" parent="VBoxContainer/HBoxContainer2/PItemPanelContainer/MarginContainer/VBoxContainer/HBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 text = "出售"
 
-[node name="PGoldLabel" type="Label" parent="VBoxContainer/HBoxContainer2/PItemPanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1294681638]
+[node name="PGoldLabel" type="Label" parent="VBoxContainer/HBoxContainer2/PItemPanelContainer/MarginContainer/VBoxContainer/HBoxContainer"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
 
-[node name="PlayerItemLabel" type="Label" parent="VBoxContainer/HBoxContainer2/PItemPanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=2075968518]
+[node name="PlayerItemLabel" type="Label" parent="VBoxContainer/HBoxContainer2/PItemPanelContainer/MarginContainer/VBoxContainer/HBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 
-[node name="DealPopupBox" parent="." unique_id=1776630185 instance=ExtResource("3_l24c7")]
+[node name="DealPopupBox" parent="." instance=ExtResource("3_l24c7")]
 layout_mode = 2
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=88990395]
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("5_hgtuo")
 
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/CloseButton" to="." method="_on_close_button_pressed"]

@@ -123,6 +123,7 @@ func load_game() -> void:
 	## 加载地图数据
 	var data:Dictionary = SaveSystem.load_game()
 	## 加载全局数据
+	Global.call_deferred("set_data", data.get("global"))
 	Global.load_persist_data()
 	Global.set_data(data.get("global"))
 	## 加载地图数据

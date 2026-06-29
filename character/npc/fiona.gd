@@ -84,6 +84,5 @@ func _to_death() -> void:
 	Global.set_npc_die("fiona", true)
 	play_dialogue()
 	await DialogueManager.dialogue_ended
-	SignalManager.on_change_audio_effect.emit("applause")
 	##SignalManager.on_player_ui_update.emit(player)
 	queue_free()

@@ -40,7 +40,6 @@
 [ext_resource type="PackedScene" uid="uid://c2blceynax5hh" path="res://interact/door/white_door.tscn" id="26_t8ium"]
 [ext_resource type="Texture2D" uid="uid://dv2gppbyv2yiw" path="res://asserts/image/tileset/tile6.png" id="27_4esx2"]
 [ext_resource type="PackedScene" uid="uid://depsy4ayf8fyv" path="res://interact/potion/mana_potion.tscn" id="27_t8ium"]
-[ext_resource type="PackedScene" uid="uid://bqmfkccu1csk6" path="res://interact/shelf/book_shelf_empty.tscn" id="28_3wa2k"]
 [ext_resource type="PackedScene" uid="uid://l5y6gbvl7ydq" path="res://character/npc/fiona.tscn" id="34_e225v"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tmd6e"]
@@ -1213,7 +1212,6 @@ scenes/22/scene = ExtResource("23_r55ag")
 scenes/23/scene = ExtResource("25_cgynp")
 scenes/24/scene = ExtResource("26_t8ium")
 scenes/25/scene = ExtResource("27_t8ium")
-scenes/26/scene = ExtResource("28_3wa2k")
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_emqwi"]
 resource_name = "npc"

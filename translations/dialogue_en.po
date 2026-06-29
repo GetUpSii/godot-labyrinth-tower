@@ -270,8 +270,8 @@ msgstr "God: And so, the story comes to an end."
 msgid "摄像机红灯打过，工厂人瞳孔闪过着属于人类的虹膜色彩"
 msgstr "The camera's red light flickers. For a moment, the factory worker's eyes flash with the iris of a human."
 
-msgid "一行小字浮现："本片未使用AI和机械生命进行表演，以保护合法权益""
-msgstr "A small line appears: "No AI or mechanical life forms were used in this production, to protect legal rights.""
+msgid "一行小字浮现：“本片未使用AI演员，以保护合法权益”"
+msgstr "A small line appears: "No AI actors were used in this production, to protect legal rights.""
 
 msgid "她看了你一眼，转过身……  "
 msgstr "She glances at you, then turns away..."
