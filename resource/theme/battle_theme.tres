@@ -1,6 +1,6 @@
 [gd_resource type="Theme" format=3 uid="uid://b441lkfj04fjv"]
 
-[ext_resource type="FontFile" uid="uid://clerbtthfdtpw" path="res://asserts/font/ark-pixel-12px-proportional-zh_cn.ttf" id="1_jvkip"]
+[ext_resource type="FontFile" uid="uid://cllsrlyysjjkr" path="res://asserts/font/ark-pixel-12px-proportional-zh_cn.ttf" id="1_jvkip"]
 [ext_resource type="Texture2D" uid="uid://c77otnkjmx1e2" path="res://asserts/image/tileset/tile.png" id="2_yjom1"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jvkip"]
