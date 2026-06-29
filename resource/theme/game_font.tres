@@ -1,0 +1,29 @@
+[gd_resource type="FontFile" format=3 uid="uid://ckx5gmr0c8b17"]
+
+[ext_resource type="FontFile" uid="uid://bsiy0vuyypnd5" path="res://asserts/font/ark-pixel-12px-proportional-latin.ttf" id="1_latin"]
+[ext_resource type="FontFile" uid="uid://bg85q5ivei4qw" path="res://asserts/font/ark-pixel-12px-proportional-zh_cn.ttf" id="2_zhcn"]
+
+[resource]
+fallbacks = Array[Font]([ExtResource("2_zhcn"), ExtResource("1_latin")])
+subpixel_positioning = 0
+msdf_pixel_range = 8
+hinting = 0
+cache/0/variation_coordinates = {}
+cache/0/face_index = 0
+cache/0/embolden = 0.0
+cache/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
+cache/0/spacing_top = 0
+cache/0/spacing_bottom = 0
+cache/0/spacing_space = 0
+cache/0/spacing_glyph = 0
+cache/0/baseline_offset = 0.0
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/50/0/ascent = 0.0
+cache/0/50/0/descent = 0.0
+cache/0/50/0/underline_position = 0.0
+cache/0/50/0/underline_thickness = 0.0
+cache/0/50/0/scale = 1.0

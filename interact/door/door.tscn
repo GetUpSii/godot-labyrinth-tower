@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://b5aakf1gmflfm"]
+
+[ext_resource type="Script" uid="uid://bpggjfsc8tm6j" path="res://interact/door/door.gd" id="2_ntfeq"]
+
+[node name="Door" type="StaticBody2D" groups=["door"]]
+collision_layer = 8
+collision_mask = 0
+script = ExtResource("2_ntfeq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+region_rect = Rect2(48, 144, 16, 16)

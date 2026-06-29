@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dr2bnu6ft4bhv"
+path="res://.godot/imported/brave.dialogue-e89f7b31cf1efeb0f58925d689d1b8ce.tres"
+
+[deps]
+
+source_file="res://resource/dialogue/brave.dialogue"
+dest_files=["res://.godot/imported/brave.dialogue-e89f7b31cf1efeb0f58925d689d1b8ce.tres"]
+
+[params]
+
+defaults=true

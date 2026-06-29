@@ -1,0 +1,197 @@
+[gd_scene format=3 uid="uid://baw7r4ug8mp3y"]
+
+[ext_resource type="Script" uid="uid://b5mjhwr7ohlms" path="res://ui/menu/main_menu.gd" id="1_37pjl"]
+[ext_resource type="Theme" uid="uid://di7qiqd4p7qg1" path="res://resource/theme/theme.tres" id="1_or6mk"]
+
+[node name="MainMenu" type="Control" unique_id=1964158364]
+auto_translate_mode = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_or6mk")
+script = ExtResource("1_37pjl")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1720559422]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=507547577]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 40
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer" unique_id=1280139351]
+layout_mode = 2
+
+[node name="TitleLebel" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1711770849]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "魔塔3000"
+horizontal_alignment = 1
+
+[node name="ButtonContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=58150861]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+alignment = 1
+
+[node name="StartButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/ButtonContainer" unique_id=1309295069]
+unique_name_in_owner = true
+layout_mode = 2
+text = "新的游戏"
+
+[node name="LoadButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/ButtonContainer" unique_id=940835224]
+unique_name_in_owner = true
+layout_mode = 2
+text = "加载游戏"
+
+[node name="ContinueButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/ButtonContainer" unique_id=25077306]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+text = "继续游戏"
+
+[node name="SaveButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/ButtonContainer" unique_id=542021577]
+unique_name_in_owner = true
+layout_mode = 2
+text = "保存游戏"
+
+[node name="SettingButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/ButtonContainer" unique_id=2091044294]
+unique_name_in_owner = true
+layout_mode = 2
+text = "设置游戏"
+
+[node name="EndingButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/ButtonContainer" unique_id=1928374650]
+unique_name_in_owner = true
+layout_mode = 2
+text = "结局成就"
+
+[node name="ExitButton" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/ButtonContainer" unique_id=1270579925]
+unique_name_in_owner = true
+layout_mode = 2
+text = "退出游戏"
+
+[node name="TipLabel" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/ButtonContainer" unique_id=1482030273]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="AudioSetting" type="MarginContainer" parent="PanelContainer" unique_id=2115841238]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/AudioSetting" unique_id=1931983418]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/AudioSetting/PanelContainer" unique_id=98462310]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/AudioSetting/PanelContainer/VBoxContainer" unique_id=698109533]
+layout_mode = 2
+text = "音频设置"
+horizontal_alignment = 1
+
+[node name="AudioBackgroundButton" type="Button" parent="PanelContainer/AudioSetting/PanelContainer/VBoxContainer" unique_id=544299595]
+unique_name_in_owner = true
+layout_mode = 2
+text = "关闭背景音乐"
+
+[node name="AudioEffectButton" type="Button" parent="PanelContainer/AudioSetting/PanelContainer/VBoxContainer" unique_id=43833440]
+unique_name_in_owner = true
+layout_mode = 2
+text = "关闭音效"
+
+[node name="HSeparator" type="HSeparator" parent="PanelContainer/AudioSetting/PanelContainer/VBoxContainer" unique_id=306038002]
+layout_mode = 2
+
+[node name="LangLabel" type="Label" parent="PanelContainer/AudioSetting/PanelContainer/VBoxContainer" unique_id=286894079]
+layout_mode = 2
+text = "语言设置"
+horizontal_alignment = 1
+
+[node name="LanguageButton" type="Button" parent="PanelContainer/AudioSetting/PanelContainer/VBoxContainer" unique_id=109387163]
+unique_name_in_owner = true
+layout_mode = 2
+text = "切换语言"
+
+[node name="EndingAchievement" type="MarginContainer" parent="PanelContainer" unique_id=1928374651]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(400, 300)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/EndingAchievement" unique_id=1738139282]
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="PanelContainer/EndingAchievement/PanelContainer" unique_id=951608468]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/EndingAchievement/PanelContainer/ScrollContainer" unique_id=102712819]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="PanelContainer/EndingAchievement/PanelContainer/ScrollContainer/VBoxContainer" unique_id=1218609763]
+layout_mode = 2
+text = "结局成就"
+horizontal_alignment = 1
+
+[node name="DieEndingLabel" type="Label" parent="PanelContainer/EndingAchievement/PanelContainer/ScrollContainer/VBoxContainer" unique_id=1787267717]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+autowrap_mode = 3
+
+[node name="BeEndingLabel" type="Label" parent="PanelContainer/EndingAchievement/PanelContainer/ScrollContainer/VBoxContainer" unique_id=1403983355]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+autowrap_mode = 3
+
+[node name="HeEndingLabel" type="Label" parent="PanelContainer/EndingAchievement/PanelContainer/ScrollContainer/VBoxContainer" unique_id=1104336273]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+autowrap_mode = 3
+
+[node name="TeEndingLabel" type="Label" parent="PanelContainer/EndingAchievement/PanelContainer/ScrollContainer/VBoxContainer" unique_id=2117219549]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+autowrap_mode = 3
+
+[node name="GdEndingLabel" type="Label" parent="PanelContainer/EndingAchievement/PanelContainer/ScrollContainer/VBoxContainer" unique_id=1394379295]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+autowrap_mode = 3
+
+[node name="HSeparator" type="HSeparator" parent="PanelContainer/EndingAchievement/PanelContainer/ScrollContainer/VBoxContainer" unique_id=163862527]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="CloseEndingButton" type="Button" parent="PanelContainer/EndingAchievement/PanelContainer/ScrollContainer/VBoxContainer" unique_id=1538106685]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 8
+text = "关闭"
+
+[connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/ButtonContainer/EndingButton" to="." method="_on_ending_button_pressed"]
+[connection signal="pressed" from="PanelContainer/AudioSetting/PanelContainer/VBoxContainer/AudioBackgroundButton" to="." method="_on_audio_background_button_pressed"]
+[connection signal="pressed" from="PanelContainer/AudioSetting/PanelContainer/VBoxContainer/AudioEffectButton" to="." method="_on_audio_effect_button_pressed"]
+[connection signal="pressed" from="PanelContainer/AudioSetting/PanelContainer/VBoxContainer/LanguageButton" to="." method="_on_language_button_pressed"]
+[connection signal="pressed" from="PanelContainer/EndingAchievement/PanelContainer/ScrollContainer/VBoxContainer/CloseEndingButton" to="." method="_on_close_ending_button_pressed"]

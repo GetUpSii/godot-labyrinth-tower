@@ -1,0 +1,130 @@
+[gd_scene format=3 uid="uid://rxqylnu5cdm2"]
+
+[node name="QuestUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -125.0
+offset_right = 200.0
+offset_bottom = 125.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="GridContainer"]
+custom_minimum_size = Vector2(400, 250)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GridContainer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -1.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="GridContainer/Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="TitleLabel" type="Label" parent="GridContainer/Panel/VBoxContainer/HBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "任务列表"
+horizontal_alignment = 1
+
+[node name="CloseButton" type="Button" parent="GridContainer/Panel/VBoxContainer/HBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 10
+text = "x"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GridContainer/Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="TaskList" type="ItemList" parent="GridContainer/Panel/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 12
+allow_reselect = true
+
+[node name="HBoxContainer" type="VBoxContainer" parent="GridContainer/Panel/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Panel" type="Panel" parent="GridContainer/Panel/VBoxContainer/HBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SegmentList" type="ItemList" parent="GridContainer/Panel/VBoxContainer/HBoxContainer/HBoxContainer/Panel"]
+unique_name_in_owner = true
+layout_mode = 1
+offset_left = 5.0
+offset_top = 6.0
+offset_right = 291.0
+offset_bottom = 93.0
+
+[node name="Panel2" type="Panel" parent="GridContainer/Panel/VBoxContainer/HBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GridContainer/Panel/VBoxContainer/HBoxContainer/HBoxContainer/Panel2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GridContainer/Panel/VBoxContainer/HBoxContainer/HBoxContainer/Panel2/VBoxContainer"]
+custom_minimum_size = Vector2(150, 75)
+layout_mode = 2
+
+[node name="descrption" type="Label" parent="GridContainer/Panel/VBoxContainer/HBoxContainer/HBoxContainer/Panel2/VBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "描述"
+
+[node name="progress" type="Label" parent="GridContainer/Panel/VBoxContainer/HBoxContainer/HBoxContainer/Panel2/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "完成度"
+
+[node name="MarginContainer" type="MarginContainer" parent="GridContainer/Panel/VBoxContainer/HBoxContainer/HBoxContainer/Panel2/VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GridContainer/Panel/VBoxContainer/HBoxContainer/HBoxContainer/Panel2/VBoxContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="ConfirmButton" type="Button" parent="GridContainer/Panel/VBoxContainer/HBoxContainer/HBoxContainer/Panel2/VBoxContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 12
+text = "确认"
+
+[node name="CancelButton" type="Button" parent="GridContainer/Panel/VBoxContainer/HBoxContainer/HBoxContainer/Panel2/VBoxContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "取消"
+
+[connection signal="pressed" from="GridContainer/Panel/VBoxContainer/HBoxContainer2/CloseButton" to="." method="_on_close_button_pressed"]
+[connection signal="item_selected" from="GridContainer/Panel/VBoxContainer/HBoxContainer/TaskList" to="." method="_on_task_list_item_selected"]
+[connection signal="item_selected" from="GridContainer/Panel/VBoxContainer/HBoxContainer/HBoxContainer/Panel/SegmentList" to="." method="_on_segment_list_item_selected"]

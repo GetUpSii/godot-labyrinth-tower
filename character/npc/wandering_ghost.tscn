@@ -1,0 +1,20 @@
+[gd_scene load_steps=6 format=3 uid="uid://gsrpmhdjtt24"]
+
+[ext_resource type="PackedScene" uid="uid://cncd2is4goxu0" path="res://character/character_2d.tscn" id="1_33rm6"]
+[ext_resource type="Script" uid="uid://d1m0h1npisg63" path="res://character/npc/wandering_ghost.gd" id="2_tody2"]
+[ext_resource type="Resource" uid="uid://c8ctu1y3hfkr4" path="res://resource/dialogue/ghost.dialogue" id="3_7cdew"]
+[ext_resource type="Shape2D" uid="uid://gnad5l02m7ks" path="res://resource/collection/rectangle_shape_2d.tres" id="3_tody2"]
+[ext_resource type="Texture2D" uid="uid://dk7pqloqet0kf" path="res://asserts/image/character/enemy.png" id="5_gkdri"]
+
+[node name="wandering_ghost" groups=["npc"] instance=ExtResource("1_33rm6")]
+script = ExtResource("2_tody2")
+dialogue = ExtResource("3_7cdew")
+type = "wandering_ghost"
+character_name = "wandering_ghost"
+
+[node name="CollisionShape2D" parent="." index="0"]
+shape = ExtResource("3_tody2")
+
+[node name="Sprite2D" parent="Animation" index="0"]
+texture = ExtResource("5_gkdri")
+frame = 4

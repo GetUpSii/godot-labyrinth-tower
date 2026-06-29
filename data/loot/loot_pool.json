@@ -1,0 +1,19 @@
+ { 
+	"pools": [
+	{
+	  "id": "undead_common", 
+	  "drops": [
+		{"type": "material", "id": "bone_fragment", "rate": 0.7},
+		{"type": "currency", "id": "copper_coin", "rate": 1.0, "min": 3, "max": 8}
+	  ]
+	},    
+	{
+	  "id": "undead_rare",      
+	  "drops": [
+		{"type": "material", "id": "ectoplasm", "rate": 0.8},
+		{"type": "equipment", "id": "phantom_cloak", "rate": 0.15},
+		
+	  ]
+	},
+	]
+}

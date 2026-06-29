@@ -1,0 +1,169 @@
+[gd_scene format=3 uid="uid://b5fkicputla2p"]
+
+[ext_resource type="Theme" uid="uid://di7qiqd4p7qg1" path="res://resource/theme/theme.tres" id="1_fogwr"]
+[ext_resource type="Script" uid="uid://b2mnaxbj5nuag" path="res://ui/menu/game_ui.gd" id="2_jo25s"]
+[ext_resource type="Texture2D" uid="uid://coqaehl5yw2po" path="res://asserts/image/1-bit.png" id="2_ssfcj"]
+[ext_resource type="PackedScene" uid="uid://dp0q7e4kaa0ja" path="res://log/log_system_ui.tscn" id="5_4b4ls"]
+[ext_resource type="PackedScene" uid="uid://dpksv7txnxsjp" path="res://ui/menu/message_box.tscn" id="8_jo25s"]
+
+[node name="GameUi" type="Control" unique_id=1146280083]
+auto_translate_mode = 1
+layout_mode = 3
+anchors_preset = 0
+theme = ExtResource("1_fogwr")
+script = ExtResource("2_jo25s")
+
+[node name="LeftContianer" type="NinePatchRect" parent="." unique_id=874452827]
+layout_mode = 0
+offset_right = 80.0
+offset_bottom = 240.0
+texture = ExtResource("2_ssfcj")
+region_rect = Rect2(768, 128, 16, 15)
+patch_margin_left = 4
+patch_margin_top = 4
+patch_margin_right = 4
+patch_margin_bottom = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="LeftContianer" unique_id=465255501]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="LeftContianer/MarginContainer" unique_id=471315268]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="MarginContainer" type="MarginContainer" parent="LeftContianer/MarginContainer/VBoxContainer" unique_id=1781418049]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_right = 10
+
+[node name="LevelTitle" type="Label" parent="LeftContianer/MarginContainer/VBoxContainer/MarginContainer" unique_id=1075001557]
+unique_name_in_owner = true
+layout_mode = 2
+text = "第1层"
+
+[node name="PlayerLevelBox" parent="LeftContianer/MarginContainer/VBoxContainer" unique_id=520910067 instance=ExtResource("8_jo25s")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="HealthBox" parent="LeftContianer/MarginContainer/VBoxContainer" unique_id=1124852727 instance=ExtResource("8_jo25s")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="MagicBox" parent="LeftContianer/MarginContainer/VBoxContainer" unique_id=313623386 instance=ExtResource("8_jo25s")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="AttackBox" parent="LeftContianer/MarginContainer/VBoxContainer" unique_id=2054915842 instance=ExtResource("8_jo25s")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="DefenceBox" parent="LeftContianer/MarginContainer/VBoxContainer" unique_id=868166720 instance=ExtResource("8_jo25s")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="GoldBox" parent="LeftContianer/MarginContainer/VBoxContainer" unique_id=1884191674 instance=ExtResource("8_jo25s")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="YellowKeyBox" parent="LeftContianer/MarginContainer/VBoxContainer" unique_id=399085480 instance=ExtResource("8_jo25s")]
+layout_mode = 2
+
+[node name="BlueKeyBox" parent="LeftContianer/MarginContainer/VBoxContainer" unique_id=2952455 instance=ExtResource("8_jo25s")]
+layout_mode = 2
+
+[node name="RedKeyBox" parent="LeftContianer/MarginContainer/VBoxContainer" unique_id=777377153 instance=ExtResource("8_jo25s")]
+layout_mode = 2
+
+[node name="RightContianer" type="NinePatchRect" parent="." unique_id=1704111153]
+layout_mode = 0
+offset_left = 496.0
+offset_right = 576.0
+offset_bottom = 240.0
+texture = ExtResource("2_ssfcj")
+region_rect = Rect2(768, 128, 16, 15)
+patch_margin_left = 4
+patch_margin_top = 4
+patch_margin_right = 4
+patch_margin_bottom = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="RightContianer" unique_id=1808665491]
+layout_mode = 0
+offset_right = 80.0
+offset_bottom = 240.0
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="RightContianer/MarginContainer" unique_id=865094889]
+layout_mode = 2
+
+[node name="BagButton" type="Button" parent="RightContianer/MarginContainer/VBoxContainer" unique_id=1035481113]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "背包"
+
+[node name="SettingButton" type="Button" parent="RightContianer/MarginContainer/VBoxContainer" unique_id=1901532000]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "设置"
+
+[node name="SkillButton" type="Button" parent="RightContianer/MarginContainer/VBoxContainer" unique_id=824288270]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "技能"
+
+[node name="EquipmentButton" type="Button" parent="RightContianer/MarginContainer/VBoxContainer" unique_id=2028657340]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "装备"
+
+[node name="CraftButton" type="Button" parent="RightContianer/MarginContainer/VBoxContainer" unique_id=1257647527]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "配方"
+
+[node name="BottomContianer" type="NinePatchRect" parent="." unique_id=1689833225]
+layout_mode = 0
+offset_top = 240.0
+offset_right = 576.0
+offset_bottom = 320.0
+texture = ExtResource("2_ssfcj")
+region_rect = Rect2(768, 128, 16, 15)
+patch_margin_left = 4
+patch_margin_top = 4
+patch_margin_right = 4
+patch_margin_bottom = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="BottomContianer" unique_id=622292087]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="LogSystemUi" parent="BottomContianer/MarginContainer" unique_id=1433161803 instance=ExtResource("5_4b4ls")]
+layout_mode = 2
+
+[connection signal="pressed" from="RightContianer/MarginContainer/VBoxContainer/SkillButton" to="." method="_on_skill_button_pressed"]
+[connection signal="pressed" from="RightContianer/MarginContainer/VBoxContainer/CraftButton" to="." method="_on_craft_button_pressed"]

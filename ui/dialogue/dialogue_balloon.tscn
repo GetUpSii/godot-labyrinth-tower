@@ -1,0 +1,104 @@
+[gd_scene load_steps=6 format=3 uid="uid://btjqsimbw8sa6"]
+
+[ext_resource type="Script" uid="uid://dq3crj8b2ibju" path="res://ui/dialogue/dialogue_balloon.gd" id="1_aqj1o"]
+[ext_resource type="Theme" uid="uid://di7qiqd4p7qg1" path="res://resource/theme/theme.tres" id="2_nebaj"]
+[ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="3_c1cfc"]
+[ext_resource type="Script" uid="uid://bb52rsfwhkxbn" path="res://addons/dialogue_manager/dialogue_responses_menu.gd" id="4_r3yr3"]
+[ext_resource type="Texture2D" uid="uid://drxt1jg2neaa7" path="res://asserts/image/character/shen-01.png" id="5_kll66"]
+
+[node name="DialogueBalloonA" type="CanvasLayer"]
+layer = 100
+script = ExtResource("1_aqj1o")
+
+[node name="Balloon" type="Control" parent="."]
+unique_name_in_owner = true
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 8
+theme = ExtResource("2_nebaj")
+
+[node name="MarginContainer" type="MarginContainer" parent="Balloon"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.685
+anchor_right = 0.72
+anchor_bottom = 1.0
+offset_left = 80.0
+offset_top = -5.94
+offset_right = 80.28
+offset_bottom = -6.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="Balloon/MarginContainer"]
+clip_children = 2
+layout_mode = 2
+mouse_filter = 1
+
+[node name="DialogueMarginContainer" type="MarginContainer" parent="Balloon/MarginContainer/PanelContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/margin_right = 40
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Balloon/MarginContainer/PanelContainer/DialogueMarginContainer"]
+layout_mode = 2
+
+[node name="CharacterLabel" type="RichTextLabel" parent="Balloon/MarginContainer/PanelContainer/DialogueMarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0.501961)
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+bbcode_enabled = true
+text = "Character"
+fit_content = true
+scroll_active = false
+
+[node name="DialogueLabel" parent="Balloon/MarginContainer/PanelContainer/DialogueMarginContainer/VBoxContainer" instance=ExtResource("3_c1cfc")]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶"
+
+[node name="ResponsesMenu" type="VBoxContainer" parent="Balloon" node_paths=PackedStringArray("response_template")]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -290.5
+offset_top = -35.0
+offset_right = 290.5
+offset_bottom = 35.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 8
+theme_override_constants/separation = 2
+alignment = 1
+script = ExtResource("4_r3yr3")
+response_template = NodePath("ResponseExample")
+
+[node name="ResponseExample" type="Button" parent="Balloon/ResponsesMenu"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Response example"
+
+[node name="CharacterTexture" type="TextureRect" parent="Balloon"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 536.0
+offset_top = 176.0
+offset_right = 636.0
+offset_bottom = 326.0
+scale = Vector2(-1, 1)
+texture = ExtResource("5_kll66")
+expand_mode = 1
+
+[connection signal="gui_input" from="Balloon" to="." method="_on_balloon_gui_input"]
+[connection signal="response_selected" from="Balloon/ResponsesMenu" to="." method="_on_responses_menu_response_selected"]

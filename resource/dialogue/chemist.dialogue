@@ -1,0 +1,149 @@
+~ start
+ 一位棕色卷发束成高马尾的圆脸女药剂师，雀斑点缀的笑脸泛着红晕。她身穿洗得发白的绿色亚麻长袍，外罩缝满口袋的靛蓝围裙。此刻她左手高举冒着绿烟的锥形瓶，踮脚前倾的身体几乎要探出橡木柜台，晶亮的榛子色眼珠紧追着滚动的钱币，咧开的嘴角扬起狡黠的弧度。
+do Global.set_npc_dialogue_title("phar", "ch1")
+=> ch1
+=> END
+
+~ battle
+if Global.get_can_battle("phar") == true 
+	要和她战斗吗?
+	- 战斗 
+		药剂师: 你要打败我？来试试吧！ 
+		do battle_with_player()
+		=> END!
+	- 取消
+=> END
+
+~ ch1
+=>< battle
+% 药剂师: 你就是那个传说中的勇士？要不要看一看我这里的东西？
+% 药剂师: 嗨，勇士，来看一看我的商品吧！
+=> shop
+=> END
+
+~ jim_die
+你成功了！太好了！
+=> END
+
+
+
+~ shop
+
+- 制作
+	- 解除变形药水
+		药剂师: 我需要3个【蓝色草药】，收你150gold
+		- 确认
+			do check_bag("defor_relieve_potion")
+		- 取消
+	- 生命药水
+		药剂师: 它能为你增加50点生命，我需要1个【红色草药】，收你100gold
+		- 确认
+			do check_bag("healing_potion")
+		- 取消
+	- 永恒药水
+		药剂师: 它能让你的生命力翻倍。我需要1颗【永恒的心】和3个【红色草药】，收你300gold
+		- 确认
+			do check_bag("perpetual_potion")
+		- 取消
+	- 现形药水
+		药剂师: 它能让整个层的陷阱现形。我需要5个【蓝色草药】，收你100gold
+		- 确认
+			do check_bag("revealing_potion")
+		- 取消
+	- 取消
+- 购买
+	do open_shop()
+- 取消
+
+=> END
+
+~ not_enough
+看起来你身上的东西不足，准备好了再来找我吧。
+=> END
+
+~ make_potion
+好好使用它
+=> END
+
+
+
+
+
+
+~ friend
+=>< battle
+%1 药剂师: 你是个慷慨大方又努力的人，我宣布我们是朋友了。但是抱歉我还是不会打折的。
+%7 药剂师: 如果你遇到杰姆，千万别相信他说的话，他是一个恶魔，如果你可以杀了他，我会奖励你的 => change
+%2 药剂师: 你有见过第4层的那个幽灵吗？它是个疯子，总是在说些奇怪的话。
+do SignalManager.on_set_dialogue_texture.emit("player")
+勇士: ……
+do SignalManager.on_set_dialogue_texture.emit("yaojishi")
+药剂师: 好吧，今天还是要看一看吗？
+=> shop
+=> END
+
+
+~ happy
+药剂师: 非常感谢你！这是给你的奖励！这枚戒指是珍贵之物，请好好珍惜。
+set Global.memory += 1
+do SignalManager.on_set_dialogue_texture.emit("player")
+勇士: ……
+do SignalManager.on_set_dialogue_texture.emit("yaojishi")
+药剂师: 你想知道我的故事？好的，这个故事说来话长。 => pass
+=> END
+
+
+~ pass
+药剂师: 我出生在一个农户家庭，虽然我们的家很小，但一切都很幸福。
+药剂师: 不知道从什么时候开始，镇上的魔物变多了，哥哥是镇上的护卫经常受伤，所以我决定未来要成为一个药剂师，这样我就可以帮助哥哥了。
+药剂师: 事情在我十六岁那年发生了变故。
+do SignalManager.on_set_dialogue_texture.emit("")
+那年莉娜从药师学院毕业，一场天火从天而降，将她的故乡烧毁。她的父母葬送在天火中，哥哥和妹妹受了重伤，为了救回唯一的亲人，莉娜花光了自己身上所有的积蓄。
+do SignalManager.on_set_dialogue_texture.emit("yaojishi")
+药剂师: 即使我将自己身上的珍贵的东西都卖了，也支付不起神殿昂贵的治疗费。
+do SignalManager.on_set_dialogue_texture.emit("")
+走投无路之下，一个乡绅上门来找她，借了她一笔钱。
+药剂师: 那个人就是杰姆。那时我并不知道他是一个恶魔！契约纸被动了手脚，如果我偿还不起就会被取走灵魂，神殿会因此判我亵渎神明，烧死我的亲人！
+莉娜从此之后日复一日干活，从没有一天休息，即使这样，债务却还是像滚雪球一般膨胀。她绝望地踏入黑暗森林，来到魔塔之下。
+她没有勇气了结自我，所以不如被魔塔之主杀死，这样至少她的家人或许还有神殿赔偿。
+do SignalManager.on_set_dialogue_texture.emit("mowang")
+魔塔之主: ……
+do SignalManager.on_set_dialogue_texture.emit("yaojishi")
+药剂师: 魔塔之主出现了，她告诉我，如果我愿意，可以进入魔塔之中，在这里恶魔不敢伤害我。
+do Global.set_npc_dialogue_title("phar", "true_friend")
+=> END
+
+
+~ true_friend
+%4 药剂师: 你来啦，我的朋友。
+%2 药剂师: 永恒的心是非常稀有的物品，如果你有，一定要好好地保存。
+%2 药剂师: 那个幽灵吗？它好像是来魔塔找人的，不知道为什么连自己都忘记了。可惜我所有的记忆药水被巫师拿走了。
+%4 药剂师: 所有人都说这些灾难都是因为魔塔之主的存在，只有杀死魔塔之主，我们才能够得到拯救。你是怎么觉得，勇士？
+=> shop
+=> END
+
+
+~ change
+do Global.set_npc_can_battle("dog", true)
+do SignalManager.on_set_dialogue_texture.emit("player")
+勇士: ……
+do SignalManager.on_set_dialogue_texture.emit("yaojishi")
+药剂师: 好吧，今天还是要看一看吗？
+=> shop
+=> END
+
+~ die
+if Global.npc_dict.get("phar").get("friend_with_player") == true:
+	药剂师: 为什么？我们不是朋友吗？
+else:
+	药剂师: 我完蛋了！你害惨我了，我做鬼都不会放过你！！！
+=> END
+
+
+~ fiona_die
+药剂师: 她死了，你可以离开魔塔了。
+=> END
+
+~ fiona_die2
+药剂师: 魔塔之主不让我告诉你，是她让我在这里卖药给你的，包括永恒药水，可是现在说已经太晚了。
+=> END

@@ -1,0 +1,45 @@
+~ start
+do SignalManager.on_set_dialogue_texture.emit("")
+一位银白色长发、血色双瞳的魔塔之主，皮肤如寒冰般苍白，头顶生长着漆黑的螺旋形尖角。她身披暗纹流动的血色长袍，斜倚在由白骨雕成的王座上。左手轻搭扶手，指尖缠绕着幽蓝魔焰
+看到来者，冰晶风暴在魔塔之主银发间盘旋凝结，猩红色瞳孔骤然收缩
+do SignalManager.on_set_dialogue_texture.emit("mowang")
+魔塔之主: 你终于来了，勇者，我等待着这一刻很久了。
+=> END
+
+
+~ ch1
+do SignalManager.on_set_dialogue_texture.emit("player")
+勇士: ……
+do SignalManager.on_set_dialogue_texture.emit("mowang")
+魔塔之主: 那是你曾经送给我的戒指
+=> END
+
+~ ch2
+do SignalManager.on_set_dialogue_texture.emit("player")
+勇士: ……
+do SignalManager.on_set_dialogue_texture.emit("mowang")
+魔塔之主: 不死不灭并不是祝福，于是我将我的心脏剖出赠予了巫师
+=> END
+
+~ ch3
+do SignalManager.on_set_dialogue_texture.emit("player")
+勇士: ……
+do SignalManager.on_set_dialogue_texture.emit("mowang")
+魔塔之主: 我们之间只能有一个人能够离开。这是宿命。
+=> END
+
+~ ch4
+do SignalManager.on_set_dialogue_texture.emit("player")
+勇士: ……
+do SignalManager.on_set_dialogue_texture.emit("mowang")
+魔塔之主: 你已经全部都想起来了，既然这样，你依然愿意放弃这场战斗吗？
+do SignalManager.on_set_dialogue_texture.emit("player")
+勇士: ……
+do SignalManager.on_set_dialogue_texture.emit("mowang")
+魔塔之主: 我愿意与你一同赴死
+=> END
+
+
+~ die
+魔塔之主: 一切终于可以结束了
+=> END

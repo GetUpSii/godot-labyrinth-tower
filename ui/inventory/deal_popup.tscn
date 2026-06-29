@@ -1,0 +1,62 @@
+[gd_scene load_steps=3 format=3 uid="uid://dvpcllty1ey28"]
+
+[ext_resource type="Theme" uid="uid://di7qiqd4p7qg1" path="res://resource/theme/theme.tres" id="1_b24ga"]
+[ext_resource type="Script" uid="uid://bkqsd0mdglyvt" path="res://ui/inventory/deal_popup.gd" id="1_r78n0"]
+
+[node name="DealPopupBox" type="Control"]
+auto_translate = true
+auto_translate_mode = 1
+visible = false
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_r78n0")
+
+[node name="PopupPanel" type="Window" parent="."]
+unique_name_in_owner = true
+title = "输入数量"
+initial_position = 2
+visible = false
+theme = ExtResource("1_b24ga")
+
+[node name="PanelContainer" type="PanelContainer" parent="PopupPanel"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PopupPanel/PanelContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+alignment = 1
+
+[node name="Input" type="LineEdit" parent="PopupPanel/PanelContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+select_all_on_focus = true
+caret_force_displayed = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PopupPanel/PanelContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Confirm" type="Button" parent="PopupPanel/PanelContainer/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "确认"
+
+[node name="Cancel" type="Button" parent="PopupPanel/PanelContainer/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 10
+text = "取消"
+
+[connection signal="close_requested" from="PopupPanel" to="." method="_on_popup_panel_close_requested"]
+[connection signal="text_changed" from="PopupPanel/PanelContainer/VBoxContainer/Input" to="." method="_on_input_text_changed"]
+[connection signal="pressed" from="PopupPanel/PanelContainer/VBoxContainer/HBoxContainer/Confirm" to="." method="_on_confirm_pressed"]
+[connection signal="pressed" from="PopupPanel/PanelContainer/VBoxContainer/HBoxContainer/Cancel" to="." method="_on_cancel_pressed"]

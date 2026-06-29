@@ -1,0 +1,40 @@
+~ memory1
+一瞬间，一股冰凉的寒意窜上你的头颅，你感受到了一阵撕裂般的剧痛。
+一些片段从你的脑海里一闪而逝……
+你什么都没有抓到。
+do SignalManager.on_set_dialogue_texture.emit("player")
+勇士: ……
+=> END
+
+~ memory2
+又是一阵头疼，忍过剧痛之后，这一次你凝神捕获那些出现在你脑海中的记忆碎片……
+洁白的仪器发出滴滴的声音，在一片纯白的空间之中，一切都是死寂，只有另一个人的心跳声伴随着你。
+do SignalManager.on_set_dialogue_texture.emit("player")
+勇士: ……
+=> END
+
+~ memory3
+那些画面逐渐清晰起来，过去的一切在这一刻变得清晰
+do SignalManager.on_set_dialogue_texture.emit("player")
+勇士: 你现在在看着我吗？
+勇士: 我已经知道该如何做出选择。
+=> END
+
+
+~ check_bones
+这是一具骸骨，看身形应该是个十岁的孩子。
+要为他收敛骸骨吗？
+- 好的
+	do add_inventory()
+- 取消
+=> END!
+
+~ prevail_fail
+do SignalManager.on_set_dialogue_texture.emit("player")
+说服失败了
+=> END
+
+~ end_battle
+do SignalManager.on_set_dialogue_texture.emit("player")
+勇士: 费诺娜
+=> END

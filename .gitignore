@@ -1,0 +1,27 @@
+# Godot imports (auto-generated)
+*.import
+*.translation
+*.md5
+.godot/
+
+# Temp / sandbox
+tmp/
+d/
+*.tmp
+
+# Tool metadata
+.reasonix/
+
+# Python scripts (dev tools)
+*.py
+
+# Build/export scripts (dev only)
+*.bat
+*.ps1
+
+# Export binaries
+export/
+
+# Debug tools
+modify_save.gd
+modify_save.gd.uid

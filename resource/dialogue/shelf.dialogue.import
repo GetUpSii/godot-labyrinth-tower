@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://fyxwonjcatg6"
+path="res://.godot/imported/shelf.dialogue-373f4855f4794d0d36fd30a6572a5b00.tres"
+
+[deps]
+
+source_file="res://resource/dialogue/shelf.dialogue"
+dest_files=["res://.godot/imported/shelf.dialogue-373f4855f4794d0d36fd30a6572a5b00.tres"]
+
+[params]
+
+defaults=true

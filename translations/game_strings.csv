@@ -1,0 +1,279 @@
+key,zh,en
+ui_main_menu_title,魔塔3000,Magic Tower 3000
+ui_main_menu_new_game,新的游戏,New Game
+ui_main_menu_load_game,加载游戏,Load Game
+ui_main_menu_continue,继续游戏,Continue
+ui_main_menu_save_game,保存游戏,Save Game
+ui_main_menu_settings,设置游戏,Settings
+ui_main_menu_exit,退出游戏,Exit Game
+ui_main_menu_audio_settings,音频设置,Audio Settings
+ui_main_menu_bgm_off,关闭背景音乐,Disable BGM
+ui_main_menu_sfx_off,关闭音效,Disable SFX
+ui_main_menu_bgm_on,打开背景音乐,Enable BGM
+ui_main_menu_sfx_on,打开音效,Enable SFX
+ui_saving_do_not_close,保存中，请不要关闭...,"Saving, please do not close..."
+ui_creating_world,世界创建中...,Creating world...
+ui_battle_skill_bar,技能栏,Skill Bar
+ui_battle_action_bar,操作栏,Action Bar
+ui_battle_attack,攻击,Attack
+ui_battle_skill,技能,Skill
+ui_battle_persuade,劝服,Persuade
+ui_battle_quick_battle,快速战斗,Quick Battle
+ui_hud_floor,第%s层,Floor %s
+ui_hud_inventory,背包,Bag
+ui_hud_settings,设置,Settings
+ui_hud_skills,技能,Skills
+ui_hud_equipment,装备,Equipment
+ui_hud_craft,配方,Recipes
+ui_inventory_title,背包,Bag
+ui_inventory_use,使用,Use
+ui_inventory_discard,丢弃,Discard
+ui_inventory_empty,空的,Empty
+ui_inventory_quantity,数量：,Quantity: 
+ui_inventory_price,价格：,Price: 
+ui_inventory_equip,装备,Equip
+ui_inventory_unequip,卸下,Unequip
+ui_inventory_full,背包已满 (默认容量%s),Bag full (capacity %s)
+ui_inventory_familiar,我熟悉它。,I am familiar with it.
+ui_shop_title,商店,Shop
+ui_shop_buy,购买,Buy
+ui_shop_sell,出售,Sell
+ui_shop_not_enough_gold,金币不足,Not enough gold
+ui_shop_not_enough_qty,数量不足,Not enough items
+ui_deal_title,输入数量,Enter Quantity
+ui_deal_confirm,确认,Confirm
+ui_deal_cancel,取消,Cancel
+ui_craft_title,合成,Craft
+ui_craft_recipe,配方：,Recipe: 
+ui_craft_use,使用,Use
+ui_craft_discard,丢弃,Discard
+ui_craft_empty,空的,Empty
+ui_skill_title,技能,Skills
+char_player,勇士,Brave
+char_mowang,魔塔之主,Tower Lord
+char_yaojishi,药剂师,Alchemist
+char_shen,神,God
+char_ghost,幽灵,Ghost
+char_wandering_ghost,徘徊的幽灵,Wandering Ghost
+char_fiona,魔塔之主·菲欧娜,Tower Lord Fiona
+char_dog,杰姆,Jim
+char_merchant,商人,Merchant
+char_brave,勇者,Hero
+char_emo,?,?
+char_narrator,,
+battle_damage_taken,受到%s伤害,Took %s damage
+battle_damage_dealt,造成%s伤害,Dealt %s damage
+battle_heal_hp,回复生命%s,Healed %s HP
+battle_heal_mp,回复魔力%s,Restored %s MP
+battle_hp_lost,生命值减少%s,HP reduced by %s
+battle_mp_lost,魔力值减少%s,MP reduced by %s
+battle_attack,攻击,Attack
+battle_defense,防御,Defense
+battle_hp,生命,HP
+battle_mp,魔力,MP
+battle_gold,金币,Gold
+battle_exp,经验,EXP
+battle_level_up,升级！,Level Up!
+battle_dodge,闪避！,Dodge!
+battle_critical,暴击！,Critical Hit!
+battle_victory,胜利！,Victory!
+battle_defeat,败北...,Defeated...
+battle_escape,逃跑了！,Escaped!
+effect_burn,灼烧,Burn
+effect_frozen,冰冻,Frozen
+effect_poison,中毒,Poisoned
+effect_reveal,现形,Revealed
+item_healing_potion,生命药水,Health Potion
+item_mana_potion,魔力药水,Mana Potion
+item_revealing_potion,现形药水,Revealing Potion
+item_red_crystal,红色水晶,Red Crystal
+item_green_crystal,绿色水晶,Green Crystal
+item_white_key,白色钥匙,White Key
+item_yellow_key,黄色钥匙,Yellow Key
+item_blue_key,蓝色钥匙,Blue Key
+item_red_key,红色钥匙,Red Key
+item_red_herb,红色草药,Red Herb
+item_blue_herb,蓝色草药,Blue Herb
+item_eternal_heart,永恒的心,Eternal Heart
+item_defor_relieve_potion,解除变形药水,Deformation Relief Potion
+item_perpetual_potion,永恒药水,Perpetual Potion
+item_memory_potion,记忆药水,Memory Potion
+item_dagger,短剑,Dagger
+item_sword,长剑,Longsword
+item_steel_shield,钢盾,Steel Shield
+item_lover_ring,恋人的戒指,Lover's Ring
+item_sapphire_ring,蓝宝石戒指,Sapphire Ring
+item_ruby_ring,红宝石戒指,Ruby Ring
+item_leather_helmet,皮质头盔,Leather Helmet
+item_iron_armor,铁质铠甲,Iron Armor
+skill_fireball,火球术,Fireball
+skill_burn,灼烧,Burn
+skill_ice_spike,冰刺,Ice Spike
+skill_blood_drain,吸血,Blood Drain
+skill_nihilize,虚无化,Nihilize
+skill_heavy_strike,重击,Heavy Strike
+skill_frost_combo,冰霜连击,Frost Combo
+enemy_skeleton,骷髅,Skeleton
+enemy_ghost,幽灵,Ghost
+enemy_ghost2,怨灵,Wraith
+enemy_giant,魔像,Golem
+enemy_bat,蝙蝠,Bat
+enemy_bat2,大蝙蝠,Big Bat
+enemy_skeleton_guard,骸骨守卫,Skeleton Guard
+enemy_sorcerer,巫师,Sorcerer
+enemy_pharmaceutist,药剂师,Alchemist
+enemy_dog,杰姆,Jim
+enemy_devil,杰姆,Jim
+general_confirm,确认,Confirm
+general_cancel,取消,Cancel
+general_close,关闭,Close
+general_yes,是,Yes
+general_no,否,No
+general_ok,好的,OK
+general_back,返回,Back
+general_next,下一步,Next
+general_player,勇士,Brave
+general_unknown,未知,Unknown
+general_error,错误,Error
+general_loading,加载中...,Loading...
+general_saving,保存中...,Saving...
+ui_save_complete,保存完成,Save complete
+ui_world_creating,世界创建中...,Creating world...
+ui_world_loading,世界加载中...,Loading world...
+ui_saving,保存中，请不要关闭...,"Saving, please do not close..."
+ui_equipped,已装备,Equipped
+ui_unequipped,未装备,Not equipped
+ui_empty_slot,空的,Empty
+ui_use,使用,Use
+ui_equip,装备,Equip
+ui_unequip,卸下,Unequip
+ui_quantity,数量：,Quantity: 
+ui_price,价格：,Price: 
+ui_bgm_on,打开背景音乐,Enable BGM
+ui_bgm_off,关闭背景音乐,Disable BGM
+ui_sfx_on,打开音效,Enable SFX
+ui_sfx_off,关闭音效,Disable SFX
+ui_level,等级,Level
+battle_surrender,投降,Surrender
+battle_ignore_player,这个角色没有理你,This character ignores you
+battle_round_end,第%s回合结束！,Round %s ended!
+battle_round_start,第%s回合开始！,Round %s begins!
+battle_skill_cast,%s释放了%s,%s cast %s
+battle_damage_dealt,%s对%s造成%s伤害,%s dealt %s damage to %s
+effect_heal_hp,回复生命%s,Restored %s HP
+effect_heal_mp,回复魔力%s,Restored %s MP
+effect_take_damage,%s受到%s伤害,%s takes %s damage
+effect_magic_damage,%s受到%s魔法伤害,%s takes %s magic damage
+effect_blood_drain,%s汲取%s的鲜血，回复生命%s,"%s drains blood from %s, recovering %s HP"
+effect_attack_up,攻击属性增长%s,Attack +%s
+effect_defense_up,防御属性增长%s,Defense +%s
+effect_stunned,%s获得眩晕效果,%s is stunned
+effect_frost_combo,%s触发冰霜连击，对%s造成%s,%s triggers Frost Combo on %s for %s
+effect_frost_stack_add,%s增加1层冰冻效果,%s gains 1 Freeze stack
+effect_burn_tick,%s持续受到%s伤害,%s takes %s burn damage
+effect_burn_gained,%s获得了燃烧效果,%s is now burning
+effect_frost_stacks_add,%s增加%s层冰冻效果,%s gains %s Freeze stacks
+effect_frost_decay,每回合减少1层冰冻效果,Freeze decays by 1 each turn
+effect_frost_5_skip,累计5层冰冻效果，跳过本回合,"5 Freeze stacks accumulated, turn skipped!"
+craft_recipe,配方：,Recipe: 
+craft_result,合成物品：,Result: 
+craft_success,合成成功,Craft successful
+craft_failed,合成失败,Craft failed
+shop_gold_insufficient,金币不足,Not enough gold
+shop_quantity_insufficient,数量不足,Not enough items
+shop_inventory_full,无法向背包中添加物品,Cannot add to Bag
+shop_equipped_cannot_sell,已经装备，不可以出售,Cannot sell equipped item
+ui_gold_label,gold: ,gold: 
+item_lover_ring_familiar,我熟悉它。,I am familiar with it.
+item_lover_ring_message,这是我送给她的，戴上它，去见她吧。,I gave this to her. Wear it and go see her.
+魔塔3000,魔塔3000,Magic Tower 3000
+新的游戏,新的游戏,New Game
+加载游戏,加载游戏,Load Game
+继续游戏,继续游戏,Continue
+保存游戏,保存游戏,Save Game
+设置游戏,设置游戏,Settings
+退出游戏,退出游戏,Exit Game
+音频设置,音频设置,Audio Settings
+关闭背景音乐,关闭背景音乐,Disable BGM
+关闭音效,关闭音效,Disable SFX
+打开背景音乐,打开背景音乐,Enable BGM
+打开音效,打开音效,Enable SFX
+技能栏,技能栏,Skill Bar
+操作栏,操作栏,Action Bar
+攻击,攻击,Attack
+技能,技能,Skill
+劝服,劝服,Persuade
+快速战斗,快速战斗,Quick Battle
+背包,背包,Bag
+设置,设置,Settings
+装备,装备,Equipment
+配方,配方,Recipes
+输入数量,输入数量,Enter Quantity
+使用,使用,Use
+丢弃,丢弃,Discard
+空的,空的,Empty
+商店,商店,Shop
+出售,出售,Sell
+合成,合成,Craft
+等级,等级,Level
+描述,描述,Description
+完成度,完成度,Completion
+任务列表,任务列表,Quest List
+你的财富（500gold）,你的财富（500gold）,Your wealth (500 gold)
+带着真挚情感的物品,带着真挚情感的物品,An item of true sentiment
+乌诺: 我好痛啊！全身都在腐烂……却不会死去，这或许就是代价,乌诺: 我好痛啊！全身都在腐烂……却不会死去，这或许就是代价,Uno: It hurts so much! My body rots... yet I cannot die. Perhaps this is the price.
+hello,hello,hello
+get out,get out,get out
+他气的双手发抖，机械关节渗出昂贵的机油。,他气的双手发抖，机械关节渗出昂贵的机油。,His hands tremble with rage; expensive oil seeps from his mechanical joints.
+一行小字浮现：“本片未使用AI演员，以保护合法权益”,一行小字浮现：“本片未使用AI演员，以保护合法权益”,A small line appears: 
+她看了你一眼，转过身……  ,她看了你一眼，转过身……  ,"She glances at you, then turns away..."
+神给了你重生的机会 ,神给了你重生的机会 ,God grants you a chance to be reborn.
+杰姆: 第三层的药剂师手中有解除变形药水，请把它给我 ,杰姆: 第三层的药剂师手中有解除变形药水，请把它给我 ,Jim: The Alchemist on Floor 3 has a Deformation Relief Potion. Please bring it to me.
+战斗 ,战斗 ,Fight
+杰姆: 愚蠢的东西，你竟然相信那个女巫说的话！ ,杰姆: 愚蠢的东西，你竟然相信那个女巫说的话！ ,Jim: You fool! You actually believed that witch?!
+药剂师: 你要打败我？来试试吧！ ,药剂师: 你要打败我？来试试吧！ ,"Alchemist: You want to fight me? Come on, then!"
+log_item_reward,获得物品奖励%s,Reward Item: %s
+log_exp_gold_reward,"奖励:经验%s,金币%s","Reward: EXP %s, Gold %s"
+craft_missing_material,"缺少 %s: 需要 %d, 当前 %d","Missing %s: need %d, have %d"
+log_has_died,%s已经死亡,%s has died
+log_entered_battle,%s和玩家进入战斗,%s entered battle with the player
+log_recovered_form,%s使用药水恢复了真身,%s used a potion and regained true form
+log_became_friends,%s和勇士成为了真正的朋友,%s became true friends with the Brave
+log_ghost_got_bones,徘徊的幽灵获得了骸骨,Wandering Ghost obtained the bones
+log_ghost_recovered_memory,徘徊的幽灵恢复记忆,Wandering Ghost recovered memories
+log_ghost_went_insane,徘徊的幽灵恢复记忆，他非常悲伤，陷入了疯狂,Wandering Ghost recovered memories and went insane with grief
+log_ghost_got_potion,徘徊的幽灵获得了记忆药水,Wandering Ghost obtained a Memory Potion
+craft_recipe_not_found,配方不存在,Recipe not found
+craft_missing_tool,缺少配方的工具,Missing required tool for crafting
+log_spend_target_reached,消费达标，药剂师决定拿勇士当朋友,"Spending target reached, the Alchemist considers the Brave a friend"
+log_not_enough_items,物品不足,Not enough items
+log_crystal_used,使用水晶，获得属性增长,"Used a crystal, gained stat increase"
+log_cannot_use_on,不能对勇士使用，对象:,"Cannot use on the Brave, target: "
+log_used_potion,使用药水,Used a potion
+log_merge_item,合并物品:%s(数量:%s),Merged item: %s (qty: %s)
+log_add_item,添加物品:%s,Added item: %s
+log_cannot_remove_equipped,已装备的物品无法被移除,Cannot remove an equipped item
+log_remove_item,移除物品:%s ,Removed item: %s
+log_skill_full,技能已满 (默认容量%s),Skill capacity full (default: %s)
+log_door_opened,打开门,Door opened
+log_missing_key,缺少物品,Missing required item
+ui_lang_switch_to_zh,切换至中文,Switch to Chinese
+ui_lang_switch_to_en,切换至英文,Switch to English
+ending_title,结局成就,Ending Achievements
+ending_die,死亡结局,Death Ending
+ending_die_desc,勇士在冒险中不幸身亡……,The Brave perished during the adventure...
+ending_be,坏结局,Bad Ending
+ending_be_desc,勇士被菲奥娜欺骗，魔塔永远陷入了黑暗……,The Brave was deceived by Fiona; the tower falls into eternal darkness...
+ending_he,好结局,Good Ending
+ending_he_desc,勇士成功离开了魔塔，重见光明……,The Brave successfully escapes the tower and sees the light again...
+ending_te,真结局,True Ending
+ending_te_desc,勇士揭开了魔塔的全部秘密，世界恢复了和平……,The Brave uncovers all the secrets of the tower; peace is restored...
+ending_gd,被神杀死,Killed by God
+ending_gd_desc,勇士在战斗中投降，被神处决……,The Brave surrendered in battle and was executed by God...
+ending_locked,???未解锁???,???Locked???
+ui_ending_button,结局成就,Endings
+语言设置,语言设置,Language Settings
+切换语言,切换语言,Switch Language
+结局成就,结局成就,Endings
+ui_lang_label,语言设置,Language Settings
+ui_lang_button,切换语言,Switch Language

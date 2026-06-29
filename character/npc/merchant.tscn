@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://6xwvy4yf1pvt"]
+
+[ext_resource type="PackedScene" uid="uid://cncd2is4goxu0" path="res://character/character_2d.tscn" id="1_6aaey"]
+[ext_resource type="Script" uid="uid://d3vxfp04664o7" path="res://character/npc/merchant.gd" id="2_mt54p"]
+
+[node name="Merchant" instance=ExtResource("1_6aaey")]
+script = ExtResource("2_mt54p")

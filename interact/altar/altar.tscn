@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://dl3n44kb1xm8p"]
+
+[ext_resource type="Texture2D" uid="uid://coqaehl5yw2po" path="res://asserts/image/1-bit.png" id="1_q3gdh"]
+[ext_resource type="Script" uid="uid://bcrvdsgqwdohq" path="res://interact/altar/altar.gd" id="1_qbb30"]
+[ext_resource type="Resource" uid="uid://b3rqqrh8kna1p" path="res://resource/dialogue/atar.dialogue" id="2_mp1ku"]
+[ext_resource type="Shape2D" uid="uid://gnad5l02m7ks" path="res://resource/collection/rectangle_shape_2d.tres" id="2_nixeo"]
+
+[node name="Altar" type="StaticBody2D"]
+script = ExtResource("1_qbb30")
+dialogue = ExtResource("2_mp1ku")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = ExtResource("2_nixeo")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_q3gdh")
+region_enabled = true
+region_rect = Rect2(368, 176, 16, 16)

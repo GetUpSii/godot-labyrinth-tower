@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://c5nhcou07kf45"]
+
+[ext_resource type="Script" uid="uid://c4te7q5oa6i67" path="res://component/AstarBox/AstarGridBox.gd" id="1_2dv6a"]
+
+[node name="AstarGridBox" type="Node2D"]
+script = ExtResource("1_2dv6a")

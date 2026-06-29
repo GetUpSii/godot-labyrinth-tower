@@ -1,0 +1,36 @@
+{
+	"skills":[
+	 "fireball":{
+		"id": "fireball",
+		 "display_name_localized": {
+		"zh": "火球术",
+		"en": "Fire Ball"
+	  },
+		"cooldown": 3.0,  
+		"mana_cost": 20,  
+		"range": 15.0,     
+		"effects": [      
+		  {
+			"type": "damage",  
+			"value": 50,             
+			"scaling": "intelligence",
+			"radius": 3.0            
+		  },
+		  {
+			"type": "burn",  
+			"duration": 5.0,          
+			"interval": 1.0,         
+			"value": 10
+		  }
+		],
+		"resources": {
+		  "cast_vfx": "res://vfx/fireball_cast.tscn", 
+		  "impact_vfx": "res://vfx/fireball_impact.tscn",
+		  "cast_sfx": "res://sfx/fireball_cast.wav"    
+		}
+	  },
+	  
+
+	]
+ 
+}

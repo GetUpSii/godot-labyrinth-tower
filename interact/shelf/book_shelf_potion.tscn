@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://di8e18a3dvxkc"]
+
+[ext_resource type="PackedScene" uid="uid://ddv42ibo4dsp2" path="res://interact/shelf/book_shelf.tscn" id="1_jbghv"]
+
+[node name="BookShelfPotion" instance=ExtResource("1_jbghv")]
+dialogue_title = "potion"

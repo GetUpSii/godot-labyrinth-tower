@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://dp0q7e4kaa0ja"]
+
+[ext_resource type="Script" uid="uid://cmvx7xy1jtfb4" path="res://log/log_system_ui.gd" id="1_lknrp"]
+[ext_resource type="Texture2D" uid="uid://5wtoalyfl7e2" path="res://asserts/image/border_box.png" id="2_thdmq"]
+
+[sub_resource type="Theme" id="Theme_thdmq"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wiiok"]
+texture = ExtResource("2_thdmq")
+texture_margin_left = 3.0
+texture_margin_top = 3.0
+texture_margin_right = 3.0
+texture_margin_bottom = 3.0
+
+[node name="LogSystemUi" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_thdmq")
+script = ExtResource("1_lknrp")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_wiiok")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer"]
+layout_mode = 2
+scroll_following = true

@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://5n6ryukx2mi2"
+path="res://.godot/imported/fiona.dialogue-87a53693f656caad874f146546ae16a8.tres"
+
+[deps]
+
+source_file="res://resource/dialogue/fiona.dialogue"
+dest_files=["res://.godot/imported/fiona.dialogue-87a53693f656caad874f146546ae16a8.tres"]
+
+[params]
+
+defaults=true

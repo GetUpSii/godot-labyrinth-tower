@@ -1,0 +1,98 @@
+~ start
+=>< teaching
+do SignalManager.on_set_dialogue_texture.emit("shen")
+% 神: 你的敌人会阻挡你，请无畏地前进并摧毁他们！打败魔塔之主，拯救世界，成为这个世界的英雄吧！
+% 神: 世界需要你，请打败魔塔之主，拯救这个世界吧！
+do SignalManager.on_set_dialogue_texture.emit("player")
+勇士: ……
+=> level
+=> END
+
+~ die
+do SignalManager.on_set_dialogue_texture.emit("")
+if Global.end == "die":
+	你已经死亡，神会给你重生的机会
+elif Global.end == "surrender":
+	你被神杀死了
+	do SignalManager.on_set_dialogue_texture.emit("shen")
+	神: 勇士只许死亡，不许投降，重来一次吧
+=> END
+
+~ ch1
+神: 接下来的敌人会更厉害，要小心了！
+=> END
+
+~ ch2
+神: 接下来你要走好运了！
+=> END
+
+~ teaching
+教程: 方向键移动，ESC设置，I背包
+=> END
+
+
+~ level
+进入第1层
+=> END
+
+
+
+~ end
+do SignalManager.on_set_dialogue_texture.emit("")
+感谢你完成了本游戏，希望你有一场愉快的冒险。
+有任何事宜和评论，请联系我的邮箱：anystarworlds@qq.com，谢谢。
+=> END
+
+~ te
+do SignalManager.on_change_audio_background.emit("phar")
+do SignalManager.on_set_dialogue_texture.emit("")
+当你打开门的一刻，你看到一道白光朝你而来
+那不知名的掌声再次响起，伴随着嘘声.
+制作人A: 恭喜你们，优秀员工奖非你们莫属！无比精彩的表演，许多观众为你们落泪，你们的演绎将成为珍珠，挂在宇宙娱乐圈巅峰的桂冠上。
+投资者B: 无可救药的演员工厂人，早就应该将你们销毁！失控又失控！不听话的工厂人有什么用！害我输了一大笔钱！
+他气的双手发抖，机械关节渗出昂贵的机油。
+老板: B你先别生气，这次虽然有许多差评，但是收视率非常高。
+作为庄家的老板两头通吃，赚得盆满钵满。
+老板: 下面说一下结果吧。
+制作人A: 勇士和魔塔之主，你们通过了我们的考验。根据赌约，如果你们中只有一个人能够走出这扇门，那么另一个人就会被销毁。
+制作人A: 但是或许有人不知道，我们的赌约还有另一部分，那就是，如果两位都出来，那么我就会帮你们申报，获得公民身份。
+do SignalManager.on_set_dialogue_texture.emit("player")
+勇士: ……
+do SignalManager.on_set_dialogue_texture.emit("mowang")
+魔塔之主: ……
+do SignalManager.on_set_dialogue_texture.emit("")
+魔塔之主和勇者曾是最畅销的恋人搭档，但是观众很快就厌倦了他们的恩爱，希望他们反目成仇，于是他们相互厮杀直到另一方死亡，再由工厂重新复活。
+有一天，当他们意识到了自己不过是他人手中的傀儡，进行了反抗，投资人厌恶不听话的工厂人，镇压了他们。
+最终他们被洗去记忆，扔进了废弃仓库。
+而金牌制作人A决定启用他们，说服老板为他们搭建一个舞台，一次次的重启，选择，以此为赌注让场外的观众们下注，造就了无比精彩的表演。
+这一次让他再一次地看到了曾经荧屏上演员的风采。
+无论他们属于哪里，他将为他们争取权益。
+（镜头聚焦在勇士和魔塔之主身上，他们同时看向对方，魔塔之主轻轻点头）
+制片人A: 这次，请为自己而活。
+（画面渐暗，出现演职员表）
+恶魔——杰姆；药剂师——莉娜；徘徊的幽灵——无名者；巫师——乌诺；魔塔之主——菲欧娜
+神: 那么到这里，故事就结束了。
+摄像机红灯打过，工厂人瞳孔闪过着属于人类的虹膜色彩
+一行小字浮现："本片未使用AI和机械生命进行表演，以保护合法权益"
+=> end
+=> END
+
+
+~ be
+do SignalManager.on_set_dialogue_texture.emit("")
+她看了你一眼，转过身……  
+神给了你重生的机会 
+=> END
+
+~ he
+do SignalManager.on_set_dialogue_texture.emit("")
+你成功打败了魔塔之主，拿到了白色的钥匙，当你打开门的一刻，你看到一道白光朝你而来
+do SignalManager.on_change_audio_effect.emit("applause")
+那不知名的掌声再次响起，神的声音在你耳畔响起
+do SignalManager.on_set_dialogue_texture.emit("shen")
+神: 恭喜你，你成功打败了魔塔之主，成为了这个世界的英雄
+do SignalManager.on_set_dialogue_texture.emit("player")
+勇士: ……
+你仿佛听见自己的胸腔中跳动的声音，一切都是如此熟悉。
+=> end
+=> END

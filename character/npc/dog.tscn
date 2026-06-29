@@ -1,0 +1,25 @@
+[gd_scene load_steps=6 format=3 uid="uid://54hxcq8645eq"]
+
+[ext_resource type="PackedScene" uid="uid://cncd2is4goxu0" path="res://character/character_2d.tscn" id="1_v8uxt"]
+[ext_resource type="Script" uid="uid://ds3ow4ys2yol1" path="res://character/npc/dog.gd" id="2_xcqk5"]
+[ext_resource type="Resource" uid="uid://00mwjf8o8xok" path="res://resource/dialogue/dog.dialogue" id="3_285fp"]
+[ext_resource type="Texture2D" uid="uid://dk7pqloqet0kf" path="res://asserts/image/character/enemy.png" id="4_285fp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v8uxt"]
+size = Vector2(16, 16)
+
+[node name="Devil" groups=["npc"] instance=ExtResource("1_v8uxt")]
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("2_xcqk5")
+dialogue = ExtResource("3_285fp")
+type = "dog"
+character_name = "dog"
+
+[node name="CollisionShape2D" parent="." index="0"]
+shape = SubResource("RectangleShape2D_v8uxt")
+
+[node name="Sprite2D" parent="Animation" index="0"]
+texture = ExtResource("4_285fp")
+frame = 8
+region_rect = Rect2(0, 16, 16, 16)

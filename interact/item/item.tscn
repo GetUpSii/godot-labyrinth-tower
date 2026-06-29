@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://ckn2b3c23gqw5"]
+
+[ext_resource type="Script" uid="uid://dk7anfbp7jskx" path="res://interact/item/item.gd" id="1_gghm4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gghm4"]
+size = Vector2(16, 16)
+
+[node name="item" type="StaticBody2D" groups=["item"]]
+collision_layer = 8
+collision_mask = 0
+script = ExtResource("1_gghm4")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_gghm4")

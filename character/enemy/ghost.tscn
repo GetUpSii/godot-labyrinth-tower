@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://cte41md5cwuo8"]
+
+[ext_resource type="PackedScene" uid="uid://cncd2is4goxu0" path="res://character/character_2d.tscn" id="1_0ld3u"]
+[ext_resource type="Texture2D" uid="uid://dk7pqloqet0kf" path="res://asserts/image/character/enemy.png" id="2_4ihir"]
+[ext_resource type="Script" uid="uid://chjra5ot6fx6l" path="res://character/enemy/enemy.gd" id="2_rqhnb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rqhnb"]
+size = Vector2(16, 16)
+
+[node name="Ghost" groups=["enemy"] instance=ExtResource("1_0ld3u")]
+script = ExtResource("2_rqhnb")
+type = "ghost"
+
+[node name="CollisionShape2D" parent="." index="0"]
+shape = SubResource("RectangleShape2D_rqhnb")
+
+[node name="Sprite2D" parent="Animation" index="0"]
+texture = ExtResource("2_4ihir")
+frame = 1
+region_rect = Rect2(16, 0, 16, 16)

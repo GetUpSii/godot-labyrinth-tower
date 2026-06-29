@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://ddv42ibo4dsp2"]
+
+[ext_resource type="Script" uid="uid://bnyus0cgb0nis" path="res://interact/shelf/book_shelf.gd" id="1_vjmp5"]
+[ext_resource type="Resource" uid="uid://fyxwonjcatg6" path="res://resource/dialogue/shelf.dialogue" id="2_a5ue0"]
+[ext_resource type="Shape2D" uid="uid://gnad5l02m7ks" path="res://resource/collection/rectangle_shape_2d.tres" id="2_kpl8f"]
+[ext_resource type="Texture2D" uid="uid://coqaehl5yw2po" path="res://asserts/image/1-bit.png" id="3_kpl8f"]
+
+[node name="BookShelf" type="StaticBody2D" groups=["shelf"]]
+script = ExtResource("1_vjmp5")
+dialogue = ExtResource("2_a5ue0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = ExtResource("2_kpl8f")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("3_kpl8f")
+region_enabled = true
+region_rect = Rect2(80, 96, 16, 16)

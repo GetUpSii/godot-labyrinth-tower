@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://dut6772htjpsv"]
+
+[ext_resource type="PackedScene" uid="uid://b5aakf1gmflfm" path="res://interact/door/door.tscn" id="1_k0fbv"]
+[ext_resource type="Shape2D" uid="uid://gnad5l02m7ks" path="res://resource/collection/rectangle_shape_2d.tres" id="2_4rdi0"]
+[ext_resource type="Texture2D" uid="uid://c2arjtblxc58l" path="res://asserts/image/item/red_door.png" id="3_481rr"]
+
+[node name="red_door" instance=ExtResource("1_k0fbv")]
+require_item = "red_key"
+type = "red_door"
+
+[node name="CollisionShape2D" parent="." index="0"]
+shape = ExtResource("2_4rdi0")
+
+[node name="Sprite2D" parent="." index="1"]
+texture = ExtResource("3_481rr")

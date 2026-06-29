@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://ct7ybbo1opvts"]
+
+[ext_resource type="PackedScene" uid="uid://cncd2is4goxu0" path="res://character/character_2d.tscn" id="1_58c3g"]
+[ext_resource type="Script" uid="uid://chjra5ot6fx6l" path="res://character/enemy/enemy.gd" id="2_mskj3"]
+[ext_resource type="Texture2D" uid="uid://dk7pqloqet0kf" path="res://asserts/image/character/enemy.png" id="3_2f2uy"]
+[ext_resource type="Shape2D" uid="uid://gnad5l02m7ks" path="res://resource/collection/rectangle_shape_2d.tres" id="3_lgb1u"]
+
+[node name="BigBat" groups=["enemy"] instance=ExtResource("1_58c3g")]
+script = ExtResource("2_mskj3")
+type = "bat2"
+character_name = "bat2"
+
+[node name="CollisionShape2D" parent="." index="0"]
+shape = ExtResource("3_lgb1u")
+
+[node name="Sprite2D" parent="Animation" index="0"]
+modulate = Color(0.192157, 0.835294, 0.917647, 1)
+texture = ExtResource("3_2f2uy")
+frame = 9

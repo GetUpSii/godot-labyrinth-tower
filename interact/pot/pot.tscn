@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://buyibgyala4lw"]
+
+[ext_resource type="Shape2D" uid="uid://gnad5l02m7ks" path="res://resource/collection/rectangle_shape_2d.tres" id="1_b42yt"]
+[ext_resource type="Script" uid="uid://uq1wrxxwdsbs" path="res://interact/pot/pot.gd" id="1_jfhce"]
+[ext_resource type="Texture2D" uid="uid://coqaehl5yw2po" path="res://asserts/image/1-bit.png" id="2_a85or"]
+
+[node name="Pot" type="StaticBody2D"]
+script = ExtResource("1_jfhce")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_a85or")
+region_enabled = true
+region_rect = Rect2(80, 224, 16, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = ExtResource("1_b42yt")

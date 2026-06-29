@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://bn1nlmunlgv14"]
+
+[ext_resource type="PackedScene" uid="uid://cncd2is4goxu0" path="res://character/character_2d.tscn" id="1_yeyse"]
+[ext_resource type="Script" uid="uid://chjra5ot6fx6l" path="res://character/enemy/enemy.gd" id="2_t6ie7"]
+[ext_resource type="Shape2D" uid="uid://gnad5l02m7ks" path="res://resource/collection/rectangle_shape_2d.tres" id="3_t6ie7"]
+[ext_resource type="Texture2D" uid="uid://dk7pqloqet0kf" path="res://asserts/image/character/enemy.png" id="4_rcbn3"]
+
+[node name="Giant" groups=["enemy"] instance=ExtResource("1_yeyse")]
+script = ExtResource("2_t6ie7")
+type = "giant"
+character_name = "giant"
+
+[node name="CollisionShape2D" parent="." index="0"]
+shape = ExtResource("3_t6ie7")
+
+[node name="Sprite2D" parent="Animation" index="0"]
+texture = ExtResource("4_rcbn3")
+frame = 11

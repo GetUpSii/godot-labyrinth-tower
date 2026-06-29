@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://fipw6sa46ki6"]
+
+[ext_resource type="PackedScene" uid="uid://cncd2is4goxu0" path="res://character/character_2d.tscn" id="1_7dfc8"]
+[ext_resource type="Script" uid="uid://chjra5ot6fx6l" path="res://character/enemy/enemy.gd" id="2_wbc2v"]
+[ext_resource type="Texture2D" uid="uid://dk7pqloqet0kf" path="res://asserts/image/character/enemy.png" id="3_wbc2v"]
+[ext_resource type="Shape2D" uid="uid://gnad5l02m7ks" path="res://resource/collection/rectangle_shape_2d.tres" id="3_x0g0k"]
+
+[node name="Sorcerer" groups=["enemy"] instance=ExtResource("1_7dfc8")]
+collision_layer = 4
+collision_mask = 0
+script = ExtResource("2_wbc2v")
+type = "sorcerer"
+
+[node name="CollisionShape2D" parent="." index="0"]
+shape = ExtResource("3_x0g0k")
+
+[node name="Sprite2D" parent="Animation" index="0"]
+texture = ExtResource("3_wbc2v")
+frame = 5
+region_rect = Rect2(80, 0, 16, 16)

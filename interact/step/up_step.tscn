@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://83lso7oobkv7"]
+
+[ext_resource type="Script" uid="uid://b22l7msqdfmpk" path="res://interact/step/step.gd" id="1_o4wpy"]
+[ext_resource type="Texture2D" uid="uid://coqaehl5yw2po" path="res://asserts/image/1-bit.png" id="2_o4wpy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mqmpb"]
+size = Vector2(16, 16)
+
+[node name="UpStep" type="Area2D"]
+collision_layer = 0
+collision_mask = 16
+script = ExtResource("1_o4wpy")
+type = "up_step"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_mqmpb")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_o4wpy")
+region_enabled = true
+region_rect = Rect2(32.9556, 96.7313, 14.5812, 14.2547)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

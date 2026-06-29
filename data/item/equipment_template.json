@@ -1,0 +1,162 @@
+{
+  "equipment": [
+	{
+	  "id": "steel_shield",
+	  "type": "EQUIPMENT",
+	  "display_name_localized": {
+		"zh": "钢盾",
+		"en": "Steel Shield"
+	  },
+	  "slot": "hands",
+	  "effects": [
+		{"type": "modify_stat","mod_type": "flat", "stat": "defense", "value": 3}
+	  ],
+	  "durability": 180,
+	  "description": "破烂的金属盾牌",
+	  "description_localized": {
+		"zh": "破烂的金属盾牌",
+		"en": "A battered metal shield."
+	  },
+	  "price": 3000
+	},
+	{
+	  "id": "dagger",
+	  "type": "EQUIPMENT",
+	  "display_name_localized": {
+		"zh": "短剑",
+		"en": "Dagger"
+	  },
+	  "slot": "hands",
+	  "effects": [
+		{"type": "modify_stat","mod_type": "flat", "stat": "attack", "value": 6},
+		{"type": "modify_stat","mod_type": "flat", "stat": "defense", "value": 0}
+	  ],
+	  "durability": 180,
+	  "description": "轻便的防身武器",
+	  "description_localized": {
+		"zh": "轻便的防身武器",
+		"en": "A lightweight self-defense weapon."
+	  },
+	  "price": 180
+	},
+	{
+	  "id": "sword",
+	  "type": "EQUIPMENT",
+	  "display_name_localized": {
+		"zh": "长剑",
+		"en": "Longsword"
+	  },
+	  "slot": "hands",
+	  "effects": [
+		{"type": "modify_stat","mod_type": "flat", "stat": "attack", "value": 6},
+		{"type": "modify_stat","mod_type": "flat", "stat": "defense", "value": 6}
+	  ],
+	  "durability": 180,
+	  "description": "标准制式武器",
+	  "description_localized": {
+		"zh": "标准制式武器",
+		"en": "A standard-issue weapon."
+	  },
+	  "price": 220
+	},
+	{
+	  "id": "lover_ring",  
+	  "display_name_localized": {
+		"zh": "恋人的戒指",
+		"en": "Lover's Ring"
+	  },
+	  "type": "EQUIPMENT",
+	  "slot": "finger",
+	  "effects": [
+		{"type": "modify_stat","mod_type": "flat", "stat": "attack", "value": 5},
+		{"type": "modify_stat","mod_type": "flat", "stat": "defense", "value": 5}
+	  ],
+	  "durability": 180,
+	  "description": "质地不明，泛着金属的光泽，戒指内侧被磨得光滑，这枚戒指想必曾经有一位很珍惜它的主人",
+	  "description_localized": {
+		"zh": "质地不明，泛着金属的光泽，戒指内侧被磨得光滑，这枚戒指想必曾经有一位很珍惜它的主人",
+		"en": "Unknown metal with a metallic sheen. The inside is worn smooth — this ring was once treasured by someone."
+	  },
+	  "price": 220
+	},
+	{
+	  "id": "sapphire_ring",  
+	  "display_name_localized": {
+		"zh": "蓝宝石戒指",
+		"en": "Sapphire Ring"
+	  },
+	  "type": "EQUIPMENT",
+	  "slot": "finger",
+	  "effects": [
+		{"type": "modify_stat","mod_type": "flat", "stat": "attack", "value": 6},
+		{"type": "modify_stat","mod_type": "flat", "stat": "defense", "value": 6}
+	  ],
+	  "durability": 180,
+	  "description": "璀璨瑰丽的蓝色宝石戒指，隐藏着一股魔力",
+	  "description_localized": {
+		"zh": "璀璨瑰丽的蓝色宝石戒指，隐藏着一股魔力",
+		"en": "A dazzling sapphire ring. It radiates a hidden magical power."
+	  },
+	  "price": 22000
+
+	},
+	{
+	  "id": "ruby_ring",  
+	  "display_name_localized": {
+		"zh": "红宝石戒指",
+		"en": "Ruby Ring"
+	  },
+	  "type": "EQUIPMENT",
+	  "slot": "finger",
+	  "effects": [
+		{"type": "modify_stat","mod_type": "flat", "stat": "attack", "value": 7},
+		{"type": "modify_stat","mod_type": "flat", "stat": "defense", "value": 5}
+	  ],
+	  "durability": 180,
+	  "description": "璀璨瑰丽的红色宝石戒指，隐藏着一股魔力",
+	  "description_localized": {
+		"zh": "璀璨瑰丽的红色宝石戒指，隐藏着一股魔力",
+		"en": "A dazzling ruby ring. It radiates a hidden magical power."
+	  },
+	  "price": 22000
+	},
+	{
+	  "id": "leather_helmet",  
+	  "display_name_localized": {
+		"zh": "皮质头盔",
+		"en": "Leather Helmet"
+	  },
+	  "type": "EQUIPMENT",
+	  "slot": "head",
+	  "effects": [
+		{"type": "modify_stat","mod_type": "flat", "stat": "defense", "value": 5}
+	  ],
+	  "durability": 180,
+	  "description": "战场上随处可见的头盔，来自于一个老兵",
+	  "description_localized": {
+		"zh": "战场上随处可见的头盔，来自于一个老兵",
+		"en": "A common battlefield helmet, passed down from an old veteran."
+	  },
+	  "price": 220
+	},
+	{
+	  "id": "iron_armor",  
+	  "display_name_localized": {
+		"zh": "铁质铠甲",
+		"en": "Iron Armor"
+	  },
+	  "type": "EQUIPMENT",
+	  "slot": "body",
+	  "effects": [
+		{"type": "modify_stat","mod_type": "flat", "stat": "defense", "value": 10}
+	  ],
+	  "durability": 180,
+	  "description": "坚固的铠甲，但很多地方已经生锈了，伤痕累累",
+	  "description_localized": {
+		"zh": "坚固的铠甲，但很多地方已经生锈了，伤痕累累",
+		"en": "Sturdy armor, though rusted and scarred from countless battles."
+	  },
+	  "price": 220
+	}
+  ]
+}

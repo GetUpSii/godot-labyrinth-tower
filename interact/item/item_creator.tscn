@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://d4eo22ucwv2sl"]
+
+[ext_resource type="Script" uid="uid://ccphahagdx04j" path="res://interact/item/item_creator.gd" id="1_1m8tk"]
+
+[node name="ItemCreator" type="Node2D"]
+script = ExtResource("1_1m8tk")

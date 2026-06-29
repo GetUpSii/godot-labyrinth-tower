@@ -1,0 +1,21 @@
+  {
+	"player": 
+		[
+			{
+			  "id": "player1",
+			  "display_name": "勇士",
+			  "display_name_localized": {
+				"zh": "勇士",
+				"en": "Brave"
+			  },
+			  "quality": "PRIMARY",
+			  "base_hp": 420,
+			  "base_mp": 100,
+			  "base_attack": 10,
+			  "base_defense": 10,
+			  "growth_rate": 0.7,
+			  "sprite_texture": "res://textures/fire_spirit.png",
+			},
+
+	]
+}

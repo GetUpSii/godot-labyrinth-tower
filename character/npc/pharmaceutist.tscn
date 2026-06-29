@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://b8uj0h1ypkpbi"]
+
+[ext_resource type="PackedScene" uid="uid://cncd2is4goxu0" path="res://character/character_2d.tscn" id="1_c8ltb"]
+[ext_resource type="Script" uid="uid://bw7ss1yglog04" path="res://character/npc/pharmaceutist.gd" id="2_tgg82"]
+[ext_resource type="Resource" uid="uid://bvkbqf8qiwyao" path="res://resource/dialogue/chemist.dialogue" id="3_kvfli"]
+[ext_resource type="Texture2D" uid="uid://dk7pqloqet0kf" path="res://asserts/image/character/enemy.png" id="4_qbbre"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qbbre"]
+size = Vector2(16, 16)
+
+[node name="Pharmaceutist" unique_id=1057697216 groups=["npc"] instance=ExtResource("1_c8ltb")]
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("2_tgg82")
+dialogue = ExtResource("3_kvfli")
+character_name = "pharmaceutist"
+
+[node name="CollisionShape2D" parent="." index="0" unique_id=1940544416]
+shape = SubResource("RectangleShape2D_qbbre")
+
+[node name="Sprite2D" parent="Animation" parent_id_path=PackedInt32Array(1843195297) index="0" unique_id=1290840523]
+texture = ExtResource("4_qbbre")
+frame = 6
+region_rect = Rect2(96, 0, 16, 16)

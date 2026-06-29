@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://b3rqqrh8kna1p"
+path="res://.godot/imported/atar.dialogue-952080e48e51c9ac30af421d7fda255a.tres"
+
+[deps]
+
+source_file="res://resource/dialogue/atar.dialogue"
+dest_files=["res://.godot/imported/atar.dialogue-952080e48e51c9ac30af421d7fda255a.tres"]
+
+[params]
+
+defaults=true

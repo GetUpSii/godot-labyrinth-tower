@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dq5h8xp8rpsi4"]
+
+[ext_resource type="PackedScene" uid="uid://ddv42ibo4dsp2" path="res://interact/shelf/book_shelf.tscn" id="1_sk36p"]
+
+[node name="BookShelfNote1" instance=ExtResource("1_sk36p")]
+dialogue_title = "secret_room1"

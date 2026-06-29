@@ -1,0 +1,201 @@
+  {
+	"enemy": 
+		[
+			{
+			  "id": "skeleton",
+			  "display_name": "骷髅",
+			  "display_name_localized": {
+				"zh": "骷髅",
+				"en": "Skeleton"
+			  },
+			  "quality": "PRIMARY",
+			  "base_hp": 100,
+			  "base_mp": 0,
+			  "base_attack": 20,
+			  "base_defense": 0,
+			  "growth_rate": 0.5,
+			  "sprite_texture": "res://textures/fire_spirit.png",
+			},
+			{
+			  "id": "ghost",
+			  "display_name": "幽灵",
+			  "display_name_localized": {
+				"zh": "幽灵",
+				"en": "Ghost"
+			  },
+			  "quality": "PRIMARY",
+			  "base_hp": 50,
+			  "base_mp": 100,
+			  "base_attack": 30,
+			  "base_defense": 0,
+			  "growth_rate": 0.4,
+			  "sprite_texture": "res://textures/fire_spirit.png",
+			  
+			},
+			{
+			  "id": "ghost2",
+			  "display_name": "怨灵",
+			  "display_name_localized": {
+				"zh": "怨灵",
+				"en": "Wraith"
+			  },
+			  "quality": "PRIMARY",
+			  "base_hp": 200,
+			  "base_mp": 100,
+			  "base_attack": 60,
+			  "base_defense": 0,
+			  "growth_rate": 0.4,
+			  "sprite_texture": "res://textures/fire_spirit.png",
+			  
+			},
+			{
+			  "id": "giant",
+			  "display_name": "魔像",
+			  "display_name_localized": {
+				"zh": "魔像",
+				"en": "Golem"
+			  },
+			  "quality": "PRIMARY",
+			  "base_hp": 800,
+			  "base_mp": 100,
+			  "base_attack": 35,
+			  "base_defense": 15,
+			  "growth_rate": 0.4,
+			  "sprite_texture": "res://textures/fire_spirit.png",
+			  
+			},
+			{
+			  "id": "bat",
+			  "display_name": "蝙蝠",
+			  "display_name_localized": {
+				"zh": "蝙蝠",
+				"en": "Bat"
+			  },
+			  "quality": "PRIMARY",
+			  "base_hp": 80,
+			  "base_mp": 30,
+			  "base_attack": 20,
+			  "base_defense": 0,
+			  "growth_rate": 0.6,
+			  "sprite_texture": "res://textures/fire_spirit.png",
+			},
+			{
+			  "id": "bat2",
+			  "display_name": "大蝙蝠",
+			  "display_name_localized": {
+				"zh": "大蝙蝠",
+				"en": "Big Bat"
+			  },
+			  "quality": "INTERMEDIATE",
+			  "base_hp": 420,
+			  "base_mp": 300,
+			  "base_attack": 60,
+			  "base_defense": 10,
+			  "growth_rate": 0.6,
+			  "sprite_texture": "res://textures/fire_spirit.png",
+			},
+			{
+			  "id": "skeleton_guard",
+			  "display_name": "骸骨守卫",
+			  "display_name_localized": {
+				"zh": "骸骨守卫",
+				"en": "Skeleton Guard"
+			  },
+			  "quality": "PRIMARY",
+			  "base_hp": 1000,
+			  "base_mp": 0,
+			  "base_attack": 30,
+			  "base_defense": 20,
+			  "growth_rate": 0.6,
+			  "sprite_texture": "res://textures/fire_spirit.png",
+			},	
+			{
+			  "id": "sorcerer",
+			  "display_name": "巫师",
+			  "display_name_localized": {
+				"zh": "巫师",
+				"en": "Sorcerer"
+			  },
+			  "quality": "INTERMEDIATE",
+			  "base_hp": 740,
+			  "base_mp": 2000,
+			  "base_attack": 10,
+			  "base_defense": 10,
+			  "growth_rate": 0.6,
+			  "sprite_texture": "res://textures/fire_spirit.png",
+			},	
+			{
+			  "id": "pharmaceutist",
+			  "display_name": "药剂师",
+			  "display_name_localized": {
+				"zh": "药剂师",
+				"en": "Alchemist"
+			  },
+			  "quality": "PRIMARY",
+			  "base_hp": 300,
+			  "base_mp": 100,
+			  "base_attack": 20,
+			  "base_defense": 10,
+			  "growth_rate": 0.6,
+			  "sprite_texture": "res://textures/fire_spirit.png",
+			},	
+			{
+			  "id": "dog",
+			  "display_name": "杰姆",
+			  "display_name_localized": {
+				"zh": "杰姆",
+				"en": "Jim"
+			  },
+			  "quality": "PRIMARY",
+			  "base_hp": 400,
+			  "base_mp": 100,
+			  "base_attack": 20,
+			  "base_defense": 0,
+			  "growth_rate": 0.6,
+			  "sprite_texture": "res://textures/fire_spirit.png",
+			},
+			{
+			  "id": "devil",
+			  "display_name": "杰姆",
+			  "display_name_localized": {
+				"zh": "杰姆",
+				"en": "Jim"
+			  },
+			  "quality": "INTERMEDIATE",
+			  "base_hp": 800,
+			  "base_mp": 200,
+			  "base_attack": 30,
+			  "base_defense": 0,
+			  "growth_rate": 0.6,
+			  "sprite_texture": "res://textures/fire_spirit.png",
+			},
+			{
+			  "id":"wandering_ghost",
+			  "display_name_localized": {
+				"zh": "徘徊的幽灵",
+				"en": "Wandering Ghost"
+			  },
+			  "quality": "INTERMEDIATE",
+			  "base_hp": 600,
+			  "base_mp": 300,
+			  "base_attack": 50,
+			  "base_defense": 10,
+			  "growth_rate": 0.6,
+			  "sprite_texture": "res://textures/fire_spirit.png",
+			},
+			{
+			  "id":"fiona",
+			  "display_name_localized": {
+				"zh": "魔塔之主*菲欧娜",
+				"en": "Tower Lord Fiona"
+			  },
+			  "quality": "ADVANCED",
+			  "base_hp": 2000,
+			  "base_mp": 1500,
+			  "base_attack": 80,
+			  "base_defense": 40,
+			  "growth_rate": 0.6,
+			  "sprite_texture": "res://textures/fire_spirit.png",
+			},
+	]
+}

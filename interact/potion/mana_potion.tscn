@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://depsy4ayf8fyv"]
+
+[ext_resource type="PackedScene" uid="uid://ckn2b3c23gqw5" path="res://interact/item/item.tscn" id="1_l8roo"]
+[ext_resource type="Script" uid="uid://dqhjc2b7i8rr0" path="res://interact/potion/mana_potion.gd" id="2_c62cf"]
+[ext_resource type="Texture2D" uid="uid://b2d4ujpd0kt6d" path="res://asserts/image/item/mana_potion.png" id="3_l8roo"]
+
+[node name="ManaPotion" instance=ExtResource("1_l8roo")]
+script = ExtResource("2_c62cf")
+type = "mana_potion"
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("3_l8roo")
+region_rect = Rect2(512, 208, 16, 16)

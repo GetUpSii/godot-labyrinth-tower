@@ -1,0 +1,63 @@
+~ start
+徘徊的幽灵: 我好像……忘了很多东西，你能帮助我找回我的记忆吗？
+=> END
+
+~ bones
+do SignalManager.on_set_dialogue_texture.emit("ghost")
+徘徊的幽灵: 我终于想起来了，谢谢你，帮我把我的孩子带回来，这是给你的报酬。
+徘徊的幽灵: 也许你可以听一听我的故事。
+do SignalManager.on_set_dialogue_texture.emit("")
+他的一生穷困潦倒，年轻时被人以诬陷的罪名关入监狱，一生都为了赎罪券还债。还没有等到债务偿还，就被领主抓走赶到了前线
+十年之后，他带着一身的伤回到故乡，故乡已经尸横遍野，满是断垣残壁，他已经无处可去，一身都要与疾病和痛苦为伴
+突然，他在路上听到了一声啼哭，他拨开石头，在废墟下发现了一个孩子
+do SignalManager.on_set_dialogue_texture.emit("ghost")
+徘徊的幽灵: 我就是在那个时候捡到了费伦，我的孩子，他是我人生中的救赎，因为遇到了他，我才有勇气继续走下去
+徘徊的幽灵: 从此以后，我将费伦作为自己的孩子抚养长大，可惜好景不长，我居住的村子又遭受到了瘟疫，费伦离开了，我到处都找不到他
+do SignalManager.on_set_dialogue_texture.emit("")
+他说到这里脸色一变，仿佛是回忆起来了什么恐怖的事情，很难想象一个身经百战的老兵会露出这样的神色
+do SignalManager.on_set_dialogue_texture.emit("ghost")
+徘徊的幽灵: 于是我离开了村子到处寻找，不断地徘徊，不肯放弃。然而也正是我的坚持，我发现了可怕的事情
+do SignalManager.on_set_dialogue_texture.emit("")
+当他回到故乡希望能够找到孩子的踪影，却发现在不远的地方又有了新的村落。他走进村子讨口水喝，却在村子里看到了熟悉的面孔
+do SignalManager.on_set_dialogue_texture.emit("ghost")
+徘徊的幽灵: 他们全部都复活了！但是他们都没有了之前的记忆。只有我，只有我还记得一切！
+徘徊的幽灵: 我不敢想象这一切的发生就像做梦一般。难道我经受的苦难都是一场梦吗?那我身上的疤痕又是怎么解释？
+do SignalManager.on_set_dialogue_texture.emit("")
+意识到这一切的变故，他又回到瘟疫的村子，所有人都已经死了，神殿接管了那片土地，他们把瘟疫归于魔塔之主
+do SignalManager.on_set_dialogue_texture.emit("ghost")
+徘徊的幽灵: 我做了一个大胆的决定，我去墓地检查那些尸体，我要找到费伦
+do SignalManager.on_set_dialogue_texture.emit("")
+但是那些尸体不翼而飞，那些病死的人，又出现在了另一个地方，失去了记忆
+do SignalManager.on_set_dialogue_texture.emit("ghost")
+徘徊的幽灵: 我真的疯了吗？最后我选择进入魔塔，在这里我知道了更多……但是我不能说，我没有疯……我真的没有疯
+do SignalManager.on_set_dialogue_texture.emit("player")
+勇士: ……
+do SignalManager.on_set_dialogue_texture.emit("")
+幽灵不再和你多说一句话
+set Global.memory += 1
+do Global.set_npc_dialogue_title("wandering_ghost", "go_home")
+=> END
+
+
+~ go_home
+徘徊的幽灵: 费伦，我的孩子，我带你回家吧。
+=> END
+
+~ find_memory
+徘徊的幽灵: 谢谢。我很快就能想起来了。
+
+=> END
+
+~ insane
+% 徘徊的幽灵: 我全部都想起来了！是那个可恶的巫师带走了我的孩子！不不是的，不是这样的，我全部都想起来了！
+% 徘徊的幽灵: 所有人都被骗了！这里是个巨大的谎言！你要快点逃出去！我也要，我也要……不不！！！我已经走不了了……
+% 徘徊的幽灵: 原来我已经死了，可是我的孩子……我的孩子啊，你在哪里？
+do SignalManager.on_set_dialogue_texture.emit("player")
+勇士: 他已经陷入了疯狂
+=> END
+
+
+~ die
+do SignalManager.on_set_dialogue_texture.emit("ghost")
+徘徊的幽灵: 就连死亡也不是归宿，我们永远无法逃离
+=> END

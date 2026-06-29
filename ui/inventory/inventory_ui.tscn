@@ -1,0 +1,98 @@
+[gd_scene load_steps=4 format=3 uid="uid://bosiohyywbd3i"]
+
+[ext_resource type="Theme" uid="uid://di7qiqd4p7qg1" path="res://resource/theme/theme.tres" id="1_j1vmf"]
+[ext_resource type="Script" uid="uid://b1i85x5y4m64v" path="res://ui/inventory/inventory_ui.gd" id="1_wij5n"]
+[ext_resource type="AudioStream" uid="uid://cce4mc2njj7f1" path="res://asserts/sfx/item/cloth-inventory.wav" id="3_cedrj"]
+
+[node name="InventoryUi" type="PanelContainer"]
+auto_translate = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -68.0
+offset_top = -48.5
+offset_right = 68.0
+offset_bottom = 48.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme = ExtResource("1_j1vmf")
+script = ExtResource("1_wij5n")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="TitleLabel" type="Label" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "背包"
+horizontal_alignment = 1
+
+[node name="CloseButton" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_font_sizes/font_size = 16
+text = "X"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ItemPanelContainer" type="PanelContainer" parent="VBoxContainer/HBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer/HBoxContainer2/ItemPanelContainer"]
+layout_mode = 2
+
+[node name="ItemContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer2/ItemPanelContainer/ScrollContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="PanelContainer2" type="PanelContainer" parent="VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/HBoxContainer2/PanelContainer2"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer2/PanelContainer2/MarginContainer"]
+layout_mode = 2
+
+[node name="ItemTextLabel" type="RichTextLabel" parent="VBoxContainer/HBoxContainer2/PanelContainer2/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/HBoxContainer2/PanelContainer2/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="UseButton" type="Button" parent="VBoxContainer/HBoxContainer2/PanelContainer2/MarginContainer/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 8
+text = "使用"
+expand_icon = true
+
+[node name="DeleteButton" type="Button" parent="VBoxContainer/HBoxContainer2/PanelContainer2/MarginContainer/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+size_flags_horizontal = 8
+text = "丢弃"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_cedrj")
+
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/CloseButton" to="." method="_on_close_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer2/PanelContainer2/MarginContainer/VBoxContainer/HBoxContainer/UseButton" to="." method="_on_use_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer2/PanelContainer2/MarginContainer/VBoxContainer/HBoxContainer/DeleteButton" to="." method="_on_delete_button_pressed"]

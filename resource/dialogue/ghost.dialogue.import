@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://c8ctu1y3hfkr4"
+path="res://.godot/imported/ghost.dialogue-616c5d43bddb452800d1a0d450ccb129.tres"
+
+[deps]
+
+source_file="res://resource/dialogue/ghost.dialogue"
+dest_files=["res://.godot/imported/ghost.dialogue-616c5d43bddb452800d1a0d450ccb129.tres"]
+
+[params]
+
+defaults=true

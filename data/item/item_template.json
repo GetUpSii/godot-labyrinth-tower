@@ -1,0 +1,326 @@
+{
+  "items": [
+	{
+	  "id": "healing_potion",
+	  "type": "CONSUMABLE",
+	  "target": "player",
+	  "display_name_localized": {
+		"zh": "生命药水",
+		"en": "Health Potion"
+	  },
+	  "max_stack": 99,
+	  "description": "生命药水，恢复50点生命值",
+	  "description_localized": {
+		"zh": "生命药水，恢复50点生命值",
+		"en": "Health Potion, restores 50 HP"
+	  },
+	  "effects": [{"type": "heal_hp", "value": 50}],
+	  "price": 200
+	},
+	{
+	  "id": "mana_potion",
+	  "type": "CONSUMABLE",
+	  "target": "player",
+	  "display_name_localized": {
+		"zh": "魔力药水",
+		"en": "Mana Potion"
+	  },
+	  "max_stack": 99,
+	  "description": "魔力药水，恢复50点魔力值",
+	  "description_localized": {
+		"zh": "魔力药水，恢复50点魔力值",
+		"en": "Mana Potion, restores 50 MP"
+	  },
+	  "effects": [{"type": "heal_mp", "value": 50}],
+	  "price": 300
+	},
+	{
+	  "id": "revealing_potion",
+	  "type": "CONSUMABLE",
+	  "target": "player",
+	  "display_name_localized": {
+		"zh": "现形药水",
+		"en": "Revealing Potion"
+	  },
+	"max_stack": 99,
+	"description": "现形药水，所有踪迹在你面前无所遁形",
+	"description_localized": {
+		"zh": "现形药水，所有踪迹在你面前无所遁形",
+		"en": "Revealing Potion — no trace can hide from your sight"
+	},
+	"effects": [{"type": "revealing"}],
+	"price": 400
+	},
+	{
+	  "id": "red_crystal",
+	  "type": "CONSUMABLE",
+	  "target": "player",
+	  "display_name_localized": {
+		"zh": "红色水晶",
+		"en": "Red Crystal"
+	  },
+	  "max_stack": 50,
+	  "description": "一块红色的水晶，力量在其中流淌，能够提升你的攻击力",
+	  "description_localized": {
+		"zh": "一块红色的水晶，力量在其中流淌，能够提升你的攻击力",
+		"en": "A red crystal pulsing with power. Increases your attack."
+	  },
+	  "effects": [{"type": "modify_stat", "mod_type": "flat", "stat": "attack", "value": 1, "duration": 0}],
+	  "price": 300
+	},
+	{
+	  "id": "green_crystal",
+	  "type": "CONSUMABLE",
+	  "target": "player",
+	  "display_name_localized": {
+		"zh": "绿色水晶",
+		"en": "Green Crystal"
+	  },
+	  "max_stack": 50,
+	  "description": "一块绿色的水晶，力量在其中流淌，能够提升你的防御力",
+	  "description_localized": {
+		"zh": "一块绿色的水晶，力量在其中流淌，能够提升你的防御力",
+		"en": "A green crystal pulsing with power. Increases your defense."
+	  },
+	  "effects": [{"type": "modify_stat", "mod_type": "flat", "stat": "defense", "value": 1, "duration": 0}],
+	  "price": 300
+	},
+	{
+	  "id": "white_key",
+	  "type": "CONSUMABLE",
+	  "target": "door",
+	  "display_name_localized": {
+		"zh": "白色钥匙",
+		"en": "White Key"
+	  },
+	  "max_stack": 99,
+	  "description": "白色钥匙，打开白色的门",
+	  "description_localized": {
+		"zh": "白色钥匙，打开白色的门",
+		"en": "White Key — opens a white door"
+	  },
+	  "effects": [{"type": "trigger_event", "event": "door_open", "color": "red"}],
+	  "price": 2000
+	},
+	{
+	  "id": "defor_relieve_potion",
+	  "type": "KEY_ITEM",
+	  "target": "player",
+	  "display_name_localized": {
+		"zh": "解除变形药水",
+		"en": "Deformation Relief Potion"
+	  },
+	  "max_stack": 10,
+	  "description": "解除变形药水，能够解除变形，需要三个蓝色草药制作",
+	  "description_localized": {
+		"zh": "解除变形药水，能够解除变形，需要三个蓝色草药制作",
+		"en": "Lifts transformations. Requires 3 Blue Herbs to craft."
+	  },
+	  "effects": [],
+	  "price": 500
+	},
+	{
+	  "id": "perpetual_potion",
+	  "type": "CONSUMABLE",
+	  "target": "player",
+	  "display_name_localized": {
+		"zh": "永恒药水",
+		"en": "Perpetual Potion"
+	  },
+	  "max_stack": 1,
+	  "description": "永恒药水，让你生命力翻倍，需要三个红色草药和一颗永恒的心制作",
+	  "description_localized": {
+		"zh": "永恒药水，让你生命力翻倍，需要三个红色草药和一颗永恒的心制作",
+		"en": "Doubles your maximum health. Requires 3 Red Herbs and an Eternal Heart to craft."
+	  },
+	  "effects": [{"type": "double_health"}],
+	  "price": 99999
+	},
+	{
+	  "id": "memory_potion",
+	  "type": "CONSUMABLE",
+	  "target": "player",
+	  "display_name_localized": {
+		"zh": "记忆药水",
+		"en": "Memory Potion"
+	  },
+	  "max_stack": 99,
+	  "description": "能够让人恢复记忆",
+	  "description_localized": {
+		"zh": "能够让人恢复记忆",
+		"en": "Restores lost memories."
+	  },
+	  "effects": [{"type": "restore_memory"}],
+	  "price": 300
+	},
+	{
+	  "id": "yellow_key",
+	  "type": "CONSUMABLE",
+	  "target": "door",
+	  "display_name_localized": {
+		"zh": "黄色钥匙",
+		"en": "Yellow Key"
+	  },
+	  "max_stack": 99,
+	  "description": "黄色钥匙，打开黄色的门",
+	  "description_localized": {
+		"zh": "黄色钥匙，打开黄色的门",
+		"en": "Yellow Key — opens a yellow door"
+	  },
+	  "effects": [{"type": "trigger_event", "event": "door_open", "color": "yellow"}],
+	  "price": 600
+	},
+	{
+	  "id": "blue_key",
+	  "type": "CONSUMABLE",
+	  "target": "door",
+	  "display_name_localized": {
+		"zh": "蓝色钥匙",
+		"en": "Blue Key"
+	  },
+	  "max_stack": 99,
+	  "description": "蓝色钥匙，打开蓝色的门",
+	  "description_localized": {
+		"zh": "蓝色钥匙，打开蓝色的门",
+		"en": "Blue Key — opens a blue door"
+	  },
+	  "effects": [{"type": "trigger_event", "event": "door_open", "color": "blue"}],
+	  "price": 1500
+	},
+	{
+	  "id": "red_key",
+	  "type": "CONSUMABLE",
+	  "target": "door",
+	  "display_name_localized": {
+		"zh": "红色钥匙",
+		"en": "Red Key"
+	  },
+	  "max_stack": 99,
+	  "description": "红色钥匙，打开红色的门",
+	  "description_localized": {
+		"zh": "红色钥匙，打开红色的门",
+		"en": "Red Key — opens a red door"
+	  },
+	  "effects": [{"type": "trigger_event", "event": "door_open", "color": "red"}],
+	  "price": 2000
+	},
+	{
+	  "id": "red_herb",
+	  "type": "MATERIAL",
+	  "target": "none",
+	  "display_name_localized": {
+		"zh": "红色草药",
+		"en": "Red Herb"
+	  },
+	  "max_stack": 99,
+	  "description": "一种草药，可以用于制作生命药水",
+	  "description_localized": {
+		"zh": "一种草药，可以用于制作生命药水",
+		"en": "A medicinal herb. Used to craft Health Potions."
+	  },
+	  "effects": [],
+	  "price": 15
+	},
+	{
+	  "id": "blue_herb",
+	  "type": "MATERIAL",
+	  "target": "none",
+	  "display_name_localized": {
+		"zh": "蓝色草药",
+		"en": "Blue Herb"
+	  },
+	  "max_stack": 99,
+	  "description": "一种草药，可以用于制作魔法药水",
+	  "description_localized": {
+		"zh": "一种草药，可以用于制作魔法药水",
+		"en": "A mystical herb. Used to craft Mana Potions."
+	  },
+	  "effects": [],
+	  "price": 15
+	},	{
+	  "id": "eternal_heart",
+	  "type": "MATERIAL",
+	  "target": "none",
+	  "display_name_localized": {
+		"zh": "永恒的心",
+		"en": "Eternal Heart"
+	  },
+	  "max_stack": 99,
+	  "description": "一颗跳动的心，能够让巫师腐朽的身体依然保持魔力",
+	  "description_localized": {
+		"zh": "一颗跳动的心，能够让巫师腐朽的身体依然保持魔力",
+		"en": "A still-beating heart. Even a withered sorcerer's body can channel magic through it."
+	  },
+	  "effects": [{"double_health": 2}],
+	  "price": 99999
+	},
+
+	{
+	  "id": "wuno_magic_note1",
+	  "type": "CONSUMABLE",
+	  "target": "player",
+	  "display_name_localized": {
+		"zh": "乌诺的魔法手札1",
+		"en": "Uno's Magic Note 1"
+	  },
+	  "max_stack": 1,
+	  "description": "其中记载着巫师的魔法",
+	  "description_localized": {
+		"zh": "其中记载着巫师的魔法",
+		"en": "Contains the wizard's magic."
+	  },
+	  "effects": [{"type": "learn", "skill": "fireball"}],
+	  "price": 3000
+	},
+	{
+	  "id": "wuno_magic_note2",
+	  "type": "CONSUMABLE",
+	  "target": "player",
+	  "display_name_localized": {
+		"zh": "乌诺的魔法手札2",
+		"en": "Uno's Magic Note 2"
+	  },
+	  "max_stack": 1,
+	  "description": "其中记载着巫师的魔法",
+	  "description_localized": {
+		"zh": "其中记载着巫师的魔法",
+		"en": "Contains the wizard's magic."
+	  },
+	  "effects": [{"type": "learn", "skill": "burn"}],
+	  "price": 6000
+	},
+	{
+	  "id": "bones",
+	  "type": "MATERIAL",
+	  "target": "none",
+	  "display_name_localized": {
+		"zh": "骸骨",
+		"en": "Bones"
+	  },
+	  "max_stack": 99,
+	  "description": "一副骸骨",
+	  "description_localized": {
+		"zh": "一副骸骨",
+		"en": "A pile of bones."
+	  },
+	  "price": 15
+	},
+	{
+	  "id": "veteran_note1",
+	  "type": "CONSUMABLE",
+	  "target": "player",
+	  "display_name_localized": {
+		"zh": "老兵的记载1",
+		"en": "Veteran's Note 1"
+	  },
+	  "max_stack": 1,
+	  "description": "孩子，我的一生一无所有，只有这个可以留给你，这是一个危险的世界，希望你能保护自己，勇敢地活下去。",
+	  "description_localized": {
+		"zh": "孩子，我的一生一无所有，只有这个可以留给你，这是一个危险的世界，希望你能保护自己，勇敢地活下去。",
+		"en": "Child, I have nothing to my name but this. Take it. The world is dangerous — stay strong, stay brave, and live."
+	  },
+	  "effects": [{"type": "learn", "skill": "dunt"}],
+	  "price": 1000
+	}
+  ]
+}

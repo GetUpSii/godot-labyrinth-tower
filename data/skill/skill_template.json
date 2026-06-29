@@ -1,0 +1,214 @@
+{
+	"skills":[
+		{
+		"id": "fireball",
+		 "display_name_localized": {
+			"zh": "火球术",
+			"en": "Fireball"
+		  	},
+		"target": "target",
+		"cooldown": 3.0,  
+		"mana": 30,  
+		"range": 15.0,    
+		"description": "释放火球术，将对敌人造成基础的魔法伤害",
+		"description_localized": {
+			"zh": "释放火球术，将对敌人造成基础的魔法伤害",
+			"en": "Launches a fireball, dealing basic magic damage to the enemy."
+		},
+		"effects": [      
+			  {
+				"type": "mana_damage",  
+				"value": 60,             
+				"scaling": "intelligence",
+				"radius": 3.0            
+			  },
+			],
+	  },
+		{
+		"id": "burn",
+		 "display_name_localized": {
+			"zh": "灼烧",
+			"en": "Burn"
+		  	},
+		"target": "target",
+		"cooldown": 3.0,  
+		"mana": 20,  
+		"range": 15.0,    
+		"description": "释放灼烧，将对敌人造成基础的魔法伤害，并给予敌人灼烧效果",
+		"description_localized": {
+			"zh": "释放灼烧，将对敌人造成基础的魔法伤害，并给予敌人灼烧效果",
+			"en": "Deals basic magic damage and applies the Burning effect to the enemy."
+		},
+		"effects": [      
+			  {
+				"type": "mana_damage",  
+				"value": 20,             
+				"scaling": "intelligence",
+				"radius": 3.0            
+			  },
+			  {
+				"type": "burn",  
+				"duration": 3.0,          
+				"interval": 1.0,         
+				"value": 10
+			  },
+			],
+
+	  },
+		{
+		"id": "ice_gland",
+		 "display_name_localized": {
+			"zh": "冰刺",
+			"en": "Ice Spike"
+		  	},
+		"target": "target",
+		"cooldown": 2.0,  
+		"mana": 30,  
+		"range": 15.0,    
+		"description": "释放冰刺，将对敌人造成基础的魔法伤害，并给予敌人2层冰冻效果，当冰冻达到4层时，敌人将失去一回合行动",
+		"description_localized": {
+			"zh": "释放冰刺，将对敌人造成基础的魔法伤害，并给予敌人2层冰冻效果，当冰冻达到4层时，敌人将失去一回合行动",
+			"en": "Launches an ice spike dealing magic damage and inflicts 2 stacks of Freeze. At 4 stacks, the enemy loses a turn."
+		},
+		"effects": [      
+			  {
+				"type": "mana_damage",  
+				"value": 50,             
+				"scaling": "intelligence",
+				"radius": 4.0            
+			  },
+			  {
+				"type": "frozen",  
+				"duration": 1.0,          
+				"interval": 1.0,
+				"value": 4 
+			  },
+			],
+
+	  },
+		{
+		"id": "suck_blood",
+		 "display_name_localized": {
+			"zh": "吸血",
+			"en": "Blood Drain"
+		  	},
+		"target": "both",
+		"cooldown": 0.0,  
+		"mana": 5,  
+		"range": 1.0,     
+		"description": "吸血，将对敌人造成基础的物理伤害，并为自身恢复一定比例的血量",
+		"description_localized": {
+			"zh": "吸血，将对敌人造成基础的物理伤害，并为自身恢复一定比例的血量",
+			"en": "Drains the enemy's blood, dealing physical damage and restoring a portion of your HP."
+		},
+		"effects": [      
+		  {
+			"type": "suck_blood",  
+			"value": 0.4,                   
+		  },
+		]
+		},
+		{
+		"id": "nihilization",
+		 "display_name_localized": {
+			"zh": "虚无化",
+			"en": "Nihilize"
+		  	},
+		"target": "owner",
+		"cooldown": 0.0,  
+		"mana": 5,  
+		"range": 1.0,     
+		"description": "虚无化的体质将免减所有物理伤害",
+		"description_localized": {
+			"zh": "虚无化的体质将免减所有物理伤害",
+			"en": "Nihilize your body, reducing all physical damage taken."
+		},
+		"effects": [      
+		  {
+			"type": "nihilization",  
+			"value": 0.5,           
+		  },
+		],
+	},
+		{
+		"id": "dunt",
+		 "display_name_localized": {
+			"zh": "重击",
+			"en": "Heavy Strike"
+		  	},
+		"target": "both",
+		"cooldown": 2.0,  
+		"mana": 5,  
+		"range": 1.0,     
+		"description": "重击，有50%的几率眩晕",
+		"description_localized": {
+			"zh": "重击，有50%的几率眩晕",
+			"en": "A heavy strike with a 50% chance to stun the target."
+		},
+		"effects": [      
+		  {
+			"type": "vertigo",  
+			"probability": 0.5        
+		  },
+		  {
+			"type": "attack_power",  
+			"value": 1.2      
+		  },
+		
+		],
+
+		},
+		{
+		"id": "frostcombo",
+		 "display_name_localized": {
+			"zh": "冰霜连击",
+			"en": "Frost Combo"
+		  	},
+		"target": "both",
+		"cooldown": 5.0,  
+		"mana": 80,  
+		"range": 1.0,     
+		"description": "冰霜连击，每次攻击都会增加冰冻，并有一定概率再进行下一次攻击，逐步递减概率",
+		"description_localized": {
+			"zh": "冰霜连击，每次攻击都会增加冰冻，并有一定概率再进行下一次攻击，逐步递减概率",
+			"en": "A combo of frost strikes. Each hit builds up Freeze and may trigger another hit with diminishing probability."
+		},
+		"effects": [      
+		  {
+			"type": "combo",  
+			"probability": 1.0,
+		  },
+		  {
+			"type": "frozen",  
+			"duration": 1.0,          
+			"interval": 1.0,
+			"value": 1 
+		  },
+	
+		]
+		},
+		{
+		"id": "nihilization",
+		 "display_name_localized": {
+			"zh": "虚无化",
+			"en": "Nihilize"
+		  	},
+		"target": "owner",
+		"cooldown": 0.0,  
+		"mana": 5,  
+		"range": 1.0,     
+		"description": "虚无化的体质将免减所有物理伤害",
+		"description_localized": {
+			"zh": "虚无化的体质将免减所有物理伤害",
+			"en": "Nihilize your body, reducing all physical damage taken."
+		},
+		"effects": [      
+		  {
+			"type": "nihilization",  
+			"value": 0.5,           
+		  },
+		]
+		},
+		
+	]
+}

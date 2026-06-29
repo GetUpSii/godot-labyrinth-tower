@@ -1,0 +1,21 @@
+~ potion
+书架上摆满了魔法书，你一个字也看不懂。直到你仔细翻查，在角落里发现了记忆药水和一页笔记。
+do get_thing("memory_potion")
+do get_thing("wuno_magic_note1")
+=> END
+
+~ secret_room1
+你发现了巫师的一则手记。
+地上的骸骨属于一个孩子。他得了疫病，为了不感染其他人，小孩选择独自出走，遇到了巫师。
+巫师带着他来到魔塔中，一边研究一边尝试治疗他。
+可惜，还没来得及痊愈，小孩就死了，巫师也受到了感染。
+=> END
+
+~ secret_room2
+你发现了巫师的一则手记，上面记录着魔法。
+do get_thing("wuno_magic_note2")
+=> END
+
+~ empty
+没有什么可以探查的了
+=> END

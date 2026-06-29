@@ -1,0 +1,12 @@
+[gd_scene load_steps=4 format=3 uid="uid://bhg1ox0ej56id"]
+
+[ext_resource type="PackedScene" uid="uid://ckn2b3c23gqw5" path="res://interact/item/item.tscn" id="1_71q6j"]
+[ext_resource type="Script" uid="uid://dn7ho1x63por4" path="res://interact/key/key.gd" id="2_wt4gm"]
+[ext_resource type="Texture2D" uid="uid://0fis7yfppkg5" path="res://asserts/image/item/white_key.png" id="3_gr7ee"]
+
+[node name="WhiteKey" instance=ExtResource("1_71q6j")]
+script = ExtResource("2_wt4gm")
+type = "white_key"
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("3_gr7ee")

@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://cmhac4pq1yx4n"]
+
+[ext_resource type="PackedScene" uid="uid://cncd2is4goxu0" path="res://character/character_2d.tscn" id="1_j4eqp"]
+[ext_resource type="Script" uid="uid://chjra5ot6fx6l" path="res://character/enemy/enemy.gd" id="2_neaco"]
+[ext_resource type="Shape2D" uid="uid://gnad5l02m7ks" path="res://resource/collection/rectangle_shape_2d.tres" id="3_brafp"]
+[ext_resource type="Texture2D" uid="uid://dk7pqloqet0kf" path="res://asserts/image/character/enemy.png" id="4_c8m48"]
+
+[node name="SkeletonGuard" groups=["enemy"] instance=ExtResource("1_j4eqp")]
+script = ExtResource("2_neaco")
+type = "skeleton_guard"
+
+[node name="CollisionShape2D" parent="." index="0"]
+shape = ExtResource("3_brafp")
+
+[node name="Sprite2D" parent="Animation" index="0"]
+texture = ExtResource("4_c8m48")
+frame = 3
+region_rect = Rect2(48, 0, 16, 16)

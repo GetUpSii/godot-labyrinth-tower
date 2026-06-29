@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bvkbqf8qiwyao"
+path="res://.godot/imported/chemist.dialogue-9b44e6c0fecf61afde7d500836cca4d6.tres"
+
+[deps]
+
+source_file="res://resource/dialogue/chemist.dialogue"
+dest_files=["res://.godot/imported/chemist.dialogue-9b44e6c0fecf61afde7d500836cca4d6.tres"]
+
+[params]
+
+defaults=true

@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="GUIDEMappingContext" format=3 uid="uid://dts3lohdb886o"]
+
+[ext_resource type="Script" uid="uid://cpplm41b5bt6m" path="res://addons/guide/guide_action_mapping.gd" id="1_opro1"]
+[ext_resource type="Resource" uid="uid://bovj3avcjvanh" path="res://input/switch_to_controller.tres" id="2_hveej"]
+[ext_resource type="Script" uid="uid://dsa1dnifd6w32" path="res://addons/guide/guide_mapping_context.gd" id="2_yogdk"]
+[ext_resource type="Script" uid="uid://mtx1unc2aqn7" path="res://addons/guide/guide_input_mapping.gd" id="3_5eti8"]
+[ext_resource type="Script" uid="uid://w3fbpe7r01n8" path="res://addons/guide/inputs/guide_input_any.gd" id="4_gf6wy"]
+[ext_resource type="Script" uid="uid://bl8rjl4oaldje" path="res://addons/guide/modifiers/guide_modifier.gd" id="5_polmm"]
+[ext_resource type="Script" uid="uid://x74mnwgr08a7" path="res://addons/guide/triggers/guide_trigger.gd" id="6_7dvoo"]
+
+[sub_resource type="Resource" id="Resource_ii78k"]
+script = ExtResource("4_gf6wy")
+joy_buttons = true
+joy_axes = true
+mouse = false
+joy = true
+
+[sub_resource type="Resource" id="Resource_4yh1m"]
+script = ExtResource("3_5eti8")
+input = SubResource("Resource_ii78k")
+
+[sub_resource type="Resource" id="Resource_hcui1"]
+script = ExtResource("1_opro1")
+action = ExtResource("2_hveej")
+input_mappings = Array[ExtResource("3_5eti8")]([SubResource("Resource_4yh1m")])
+
+[resource]
+script = ExtResource("2_yogdk")
+mappings = Array[ExtResource("1_opro1")]([SubResource("Resource_hcui1")])
+metadata/_custom_type_script = "uid://dsa1dnifd6w32"

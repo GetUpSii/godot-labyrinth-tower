@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="GUIDEMappingContext" format=3 uid="uid://b414t174alarq"]
+
+[ext_resource type="Script" uid="uid://cpplm41b5bt6m" path="res://addons/guide/guide_action_mapping.gd" id="1_j1fbk"]
+[ext_resource type="Resource" uid="uid://cat3hcjdanxrx" path="res://input/switch_to_keyboard_and_mouse.tres" id="2_54tnw"]
+[ext_resource type="Script" uid="uid://dsa1dnifd6w32" path="res://addons/guide/guide_mapping_context.gd" id="2_aosqo"]
+[ext_resource type="Script" uid="uid://mtx1unc2aqn7" path="res://addons/guide/guide_input_mapping.gd" id="3_43in0"]
+[ext_resource type="Script" uid="uid://w3fbpe7r01n8" path="res://addons/guide/inputs/guide_input_any.gd" id="4_7viou"]
+[ext_resource type="Script" uid="uid://bl8rjl4oaldje" path="res://addons/guide/modifiers/guide_modifier.gd" id="5_she65"]
+[ext_resource type="Script" uid="uid://x74mnwgr08a7" path="res://addons/guide/triggers/guide_trigger.gd" id="6_tb5tq"]
+
+[sub_resource type="Resource" id="Resource_tmxfh"]
+script = ExtResource("4_7viou")
+mouse_buttons = true
+mouse_movement = true
+keyboard = true
+mouse = true
+joy = false
+
+[sub_resource type="Resource" id="Resource_7ugp6"]
+script = ExtResource("3_43in0")
+input = SubResource("Resource_tmxfh")
+
+[sub_resource type="Resource" id="Resource_se7rt"]
+script = ExtResource("1_j1fbk")
+action = ExtResource("2_54tnw")
+input_mappings = Array[ExtResource("3_43in0")]([SubResource("Resource_7ugp6")])
+
+[resource]
+script = ExtResource("2_aosqo")
+mappings = Array[ExtResource("1_j1fbk")]([SubResource("Resource_se7rt")])
+metadata/_custom_type_script = "uid://dsa1dnifd6w32"

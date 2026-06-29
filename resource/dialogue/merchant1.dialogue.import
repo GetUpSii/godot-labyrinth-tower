@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://ddbclf7bu6alb"
+path="res://.godot/imported/merchant1.dialogue-518d0c2edc3b5fd10342a95c0080b214.tres"
+
+[deps]
+
+source_file="res://resource/dialogue/merchant1.dialogue"
+dest_files=["res://.godot/imported/merchant1.dialogue-518d0c2edc3b5fd10342a95c0080b214.tres"]
+
+[params]
+
+defaults=true

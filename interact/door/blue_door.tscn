@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://psu7f40ntpac"]
+
+[ext_resource type="PackedScene" uid="uid://b5aakf1gmflfm" path="res://interact/door/door.tscn" id="1_vdor0"]
+[ext_resource type="Shape2D" uid="uid://gnad5l02m7ks" path="res://resource/collection/rectangle_shape_2d.tres" id="2_3tdf3"]
+[ext_resource type="Texture2D" uid="uid://c6l6125niy3jr" path="res://asserts/image/blue_door.png" id="3_ksdx6"]
+
+[node name="blue_door" instance=ExtResource("1_vdor0")]
+require_item = "blue_key"
+type = "blue_door"
+
+[node name="CollisionShape2D" parent="." index="0"]
+shape = ExtResource("2_3tdf3")
+
+[node name="Sprite2D" parent="." index="1"]
+texture = ExtResource("3_ksdx6")

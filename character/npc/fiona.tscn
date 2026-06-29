@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://l5y6gbvl7ydq"]
+
+[ext_resource type="PackedScene" uid="uid://cncd2is4goxu0" path="res://character/character_2d.tscn" id="1_a50y5"]
+[ext_resource type="Shape2D" uid="uid://gnad5l02m7ks" path="res://resource/collection/rectangle_shape_2d.tres" id="2_10oio"]
+[ext_resource type="Script" uid="uid://dl37rfircn61q" path="res://character/npc/fiona.gd" id="2_hixpf"]
+[ext_resource type="Resource" uid="uid://5n6ryukx2mi2" path="res://resource/dialogue/fiona.dialogue" id="3_asxxl"]
+[ext_resource type="Texture2D" uid="uid://dk7pqloqet0kf" path="res://asserts/image/character/enemy.png" id="4_asxxl"]
+
+[node name="Fiona" unique_id=1279411816 groups=["npc"] instance=ExtResource("1_a50y5")]
+script = ExtResource("2_hixpf")
+dialogue = ExtResource("3_asxxl")
+type = "fiona"
+character_name = "fiona"
+
+[node name="CollisionShape2D" parent="." index="0" unique_id=1940544416]
+shape = ExtResource("2_10oio")
+debug_color = Color(0.960784, 0.145098, 0.14902, 0.419608)
+
+[node name="Sprite2D" parent="Animation" parent_id_path=PackedInt32Array(1843195297) index="0" unique_id=1290840523]
+texture = ExtResource("4_asxxl")
+frame = 12

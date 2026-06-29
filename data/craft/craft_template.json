@@ -1,0 +1,132 @@
+{
+	"craft": [
+		{	
+			"id": "revealing_potion",
+			"display_name_localized": {
+			"zh": "现形药水配方",
+			"en": "Revealing Potion Recipe"
+			},
+			"type": "POTION",
+			"tool": "pot",
+			"texture": "basic_sword_1.012345687901.jpg",
+			"description": "现形药水配方",
+			"description_localized": {
+				"zh": "现形药水配方",
+				"en": "Revealing Potion Recipe"
+			},
+			"price": 350,
+			"mana": 20,
+			"recipe": {
+				"blue_herb": 5,
+			},
+			"result": "revealing_potion",
+		},
+		{	
+			"id": "healing_potion",
+			"display_name_localized": {
+			"zh": "生命药水配方",
+			"en": "Health Potion Recipe"
+			},
+			"type": "POTION",
+			"tool": "pot",
+			"texture": "basic_sword_1.012345687901.jpg",
+			"description": "生命药水配方",
+			"description_localized": {
+				"zh": "生命药水配方",
+				"en": "Health Potion Recipe"
+			},
+			"price": 350,
+			"mana": 10,
+			"recipe": {
+				"red_herb": 1,
+			},
+			"result": "healing_potion",
+		},
+		{	
+			"id": "mana_potion",
+			"display_name_localized": {
+			"zh": "魔力药水配方",
+			"en": "Mana Potion Recipe"
+			},
+			"type": "POTION",
+			"tool": "pot",
+			"texture": "basic_sword_1.012345687901.jpg",
+			"description": "魔力药水配方",
+			"description_localized": {
+				"zh": "魔力药水配方",
+				"en": "Mana Potion Recipe"
+			},
+			"price": 350,
+			"mana": 10,
+			"recipe": {
+				"blue_herb": 2,
+			},
+			"result": "mana_potion",
+		},
+		{	
+			"id": "defor_relieve_potion",
+			"display_name_localized": {
+			"zh": "解除变形药水配方",
+			"en": "Deformation Relief Potion Recipe"
+			},
+			"type": "POTION",
+			"tool": "pot",
+			"texture": "basic_sword_1.012345687901.jpg",
+			"description": "解除变形药水配方",
+			"description_localized": {
+				"zh": "解除变形药水配方",
+				"en": "Deformation Relief Potion Recipe"
+			},
+			"price": 350,
+			"mana": 30,
+			"recipe": {
+				"blue_herb": 3,
+			},
+			"result": "defor_relieve_potion",
+		},
+		{	
+			"id": "perpetual_potion",
+			"display_name_localized": {
+			"zh": "永恒药水配方",
+			"en": "Perpetual Potion Recipe"
+			},
+			"type": "POTION",
+			"tool": "pot",
+			"texture": "basic_sword_1.012345687901.jpg",
+			"description": "永恒药水配方",
+			"description_localized": {
+				"zh": "永恒药水配方",
+				"en": "Perpetual Potion Recipe"
+			},
+			"price": 99999,
+			"mana": 50,
+			"recipe": {
+				"eternal_heart": 1,
+				"red_herb": 3,
+			},
+			"result": "perpetual_potion",
+		},
+		{	
+			"id": "memory_potion",
+			"display_name_localized": {
+			"zh": "记忆药水配方",
+			"en": "Memory Potion Recipe"
+			},
+			"type": "POTION",
+			"tool": "pot",
+			"texture": "basic_sword_1.012345687901.jpg",
+			"description": "记忆药水配方",
+			"description_localized": {
+				"zh": "记忆药水配方",
+				"en": "Memory Potion Recipe"
+			},
+			"price": 350,
+			"mana": 100,
+			"recipe": {
+				"blue_herb": 3,
+			},
+			"result": "memory_potion",
+		},
+
+	]
+}
