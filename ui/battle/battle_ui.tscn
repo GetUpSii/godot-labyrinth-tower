@@ -1,11 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://cta4t4cn1mwnm"]
+[gd_scene format=3 uid="uid://cta4t4cn1mwnm"]
 
 [ext_resource type="Theme" uid="uid://b441lkfj04fjv" path="res://resource/theme/battle_theme.tres" id="1_frqam"]
 [ext_resource type="Script" uid="uid://clhkdirtoqmx8" path="res://ui/battle/battle_ui.gd" id="2_74xmg"]
 [ext_resource type="PackedScene" uid="uid://dpksv7txnxsjp" path="res://ui/menu/message_box.tscn" id="5_c855m"]
 
-[node name="BattleUI" type="PanelContainer"]
-auto_translate = true
+[node name="BattleUI" type="PanelContainer" unique_id=351523718]
+auto_translate_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -20,97 +20,97 @@ grow_vertical = 2
 theme = ExtResource("1_frqam")
 script = ExtResource("2_74xmg")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=210848966]
 layout_mode = 2
 color = Color(0, 0, 0, 1)
 
-[node name="Timer" type="Timer" parent="."]
+[node name="Timer" type="Timer" parent="." unique_id=408465655]
 wait_time = 0.6
 
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1164368178]
 layout_mode = 2
 theme_override_constants/separation = 0
 
-[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer" unique_id=1182124272]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 10
 theme_override_constants/margin_bottom = 5
 
-[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/MarginContainer"]
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/MarginContainer" unique_id=1400795067]
 layout_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/MarginContainer/PanelContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/MarginContainer/PanelContainer" unique_id=817028107]
 layout_mode = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/MarginContainer/PanelContainer/VBoxContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/MarginContainer/PanelContainer/VBoxContainer" unique_id=1016920714]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="SkillVBoxContainer" type="VBoxContainer" parent="HBoxContainer/MarginContainer/PanelContainer/VBoxContainer/MarginContainer"]
+[node name="SkillVBoxContainer" type="VBoxContainer" parent="HBoxContainer/MarginContainer/PanelContainer/VBoxContainer/MarginContainer" unique_id=292836983]
 unique_name_in_owner = true
 layout_mode = 2
 
-[node name="Label" type="Label" parent="HBoxContainer/MarginContainer/PanelContainer/VBoxContainer/MarginContainer/SkillVBoxContainer"]
+[node name="Label" type="Label" parent="HBoxContainer/MarginContainer/PanelContainer/VBoxContainer/MarginContainer/SkillVBoxContainer" unique_id=198295391]
 layout_mode = 2
 text = "技能栏"
 horizontal_alignment = 1
 
-[node name="PlayerActionContainer" type="MarginContainer" parent="HBoxContainer/MarginContainer/PanelContainer/VBoxContainer"]
+[node name="PlayerActionContainer" type="MarginContainer" parent="HBoxContainer/MarginContainer/PanelContainer/VBoxContainer" unique_id=1959643009]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/margin_top = 0
 theme_override_constants/margin_bottom = 5
 
-[node name="ActionContainer" type="VBoxContainer" parent="HBoxContainer/MarginContainer/PanelContainer/VBoxContainer/PlayerActionContainer"]
+[node name="ActionContainer" type="VBoxContainer" parent="HBoxContainer/MarginContainer/PanelContainer/VBoxContainer/PlayerActionContainer" unique_id=982092344]
 unique_name_in_owner = true
 layout_mode = 2
 
-[node name="Label" type="Label" parent="HBoxContainer/MarginContainer/PanelContainer/VBoxContainer/PlayerActionContainer/ActionContainer"]
+[node name="Label" type="Label" parent="HBoxContainer/MarginContainer/PanelContainer/VBoxContainer/PlayerActionContainer/ActionContainer" unique_id=1208355401]
 layout_mode = 2
 text = "操作栏"
 horizontal_alignment = 1
 
-[node name="AttackButton" type="Button" parent="HBoxContainer/MarginContainer/PanelContainer/VBoxContainer/PlayerActionContainer/ActionContainer"]
+[node name="AttackButton" type="Button" parent="HBoxContainer/MarginContainer/PanelContainer/VBoxContainer/PlayerActionContainer/ActionContainer" unique_id=8884363]
 unique_name_in_owner = true
 layout_mode = 2
 text = "攻击"
 
-[node name="SkillButton" type="Button" parent="HBoxContainer/MarginContainer/PanelContainer/VBoxContainer/PlayerActionContainer/ActionContainer"]
+[node name="SkillButton" type="Button" parent="HBoxContainer/MarginContainer/PanelContainer/VBoxContainer/PlayerActionContainer/ActionContainer" unique_id=791806809]
 unique_name_in_owner = true
 layout_mode = 2
 text = "技能"
 
-[node name="PrevailButton" type="Button" parent="HBoxContainer/MarginContainer/PanelContainer/VBoxContainer/PlayerActionContainer/ActionContainer"]
+[node name="PrevailButton" type="Button" parent="HBoxContainer/MarginContainer/PanelContainer/VBoxContainer/PlayerActionContainer/ActionContainer" unique_id=767145462]
 unique_name_in_owner = true
 layout_mode = 2
 text = "劝服"
 
-[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer" unique_id=1338042395]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="MarginContainer2" type="MarginContainer" parent="HBoxContainer/VBoxContainer"]
+[node name="MarginContainer2" type="MarginContainer" parent="HBoxContainer/VBoxContainer" unique_id=468736923]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
 
-[node name="PanelContainer2" type="PanelContainer" parent="HBoxContainer/VBoxContainer/MarginContainer2"]
+[node name="PanelContainer2" type="PanelContainer" parent="HBoxContainer/VBoxContainer/MarginContainer2" unique_id=645526575]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/VBoxContainer/MarginContainer2/PanelContainer2"]
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/VBoxContainer/MarginContainer2/PanelContainer2" unique_id=842860724]
 layout_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/VBoxContainer/MarginContainer2/PanelContainer2/HBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/VBoxContainer/MarginContainer2/PanelContainer2/HBoxContainer" unique_id=1144038473]
 layout_mode = 2
 size_flags_horizontal = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/VBoxContainer/MarginContainer2/PanelContainer2/HBoxContainer/VBoxContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/VBoxContainer/MarginContainer2/PanelContainer2/HBoxContainer/VBoxContainer" unique_id=278808443]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 6
@@ -119,31 +119,41 @@ theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="PStage" type="Control" parent="HBoxContainer/VBoxContainer/MarginContainer2/PanelContainer2/HBoxContainer/VBoxContainer/MarginContainer"]
+[node name="PStage" type="Control" parent="HBoxContainer/VBoxContainer/MarginContainer2/PanelContainer2/HBoxContainer/VBoxContainer/MarginContainer" unique_id=304816174]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(60, 60)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 8
 
-[node name="Control" type="Control" parent="HBoxContainer/VBoxContainer/MarginContainer2/PanelContainer2/HBoxContainer"]
+[node name="Control" type="Control" parent="HBoxContainer/VBoxContainer/MarginContainer2/PanelContainer2/HBoxContainer" unique_id=855166197]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="JumpButton" type="Button" parent="HBoxContainer/VBoxContainer/MarginContainer2/PanelContainer2/HBoxContainer/Control"]
-unique_name_in_owner = true
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -20.0
-offset_right = 20.0
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/VBoxContainer/MarginContainer2/PanelContainer2/HBoxContainer/Control" unique_id=1759072143]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer/VBoxContainer/MarginContainer2/PanelContainer2/HBoxContainer"]
+[node name="JumpButton" type="Button" parent="HBoxContainer/VBoxContainer/MarginContainer2/PanelContainer2/HBoxContainer/Control/VBoxContainer" unique_id=1624091942]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+text = "快速战斗"
+
+[node name="SurrenderButton" type="Button" parent="HBoxContainer/VBoxContainer/MarginContainer2/PanelContainer2/HBoxContainer/Control/VBoxContainer" unique_id=1029008319]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+disabled = true
+text = "投降"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer/VBoxContainer/MarginContainer2/PanelContainer2/HBoxContainer" unique_id=648072908]
 layout_mode = 2
 size_flags_horizontal = 0
 
-[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/VBoxContainer/MarginContainer2/PanelContainer2/HBoxContainer/VBoxContainer2"]
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/VBoxContainer/MarginContainer2/PanelContainer2/HBoxContainer/VBoxContainer2" unique_id=774174322]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/margin_left = 10
@@ -151,72 +161,73 @@ theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 70
 theme_override_constants/margin_bottom = 10
 
-[node name="EStage" type="Control" parent="HBoxContainer/VBoxContainer/MarginContainer2/PanelContainer2/HBoxContainer/VBoxContainer2/MarginContainer"]
+[node name="EStage" type="Control" parent="HBoxContainer/VBoxContainer/MarginContainer2/PanelContainer2/HBoxContainer/VBoxContainer2/MarginContainer" unique_id=672253930]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(60, 60)
 layout_mode = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/VBoxContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/VBoxContainer" unique_id=267782480]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/VBoxContainer/MarginContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/VBoxContainer/MarginContainer" unique_id=511047291]
 layout_mode = 2
 
-[node name="PlayerPanelContainer" type="PanelContainer" parent="HBoxContainer/VBoxContainer/MarginContainer/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="PlayerContainer" type="VBoxContainer" parent="HBoxContainer/VBoxContainer/MarginContainer/HBoxContainer/PlayerPanelContainer"]
-unique_name_in_owner = true
+[node name="PlayerPanelContainer" type="PanelContainer" parent="HBoxContainer/VBoxContainer/MarginContainer/HBoxContainer" unique_id=1436916430]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="PHealthBox" parent="HBoxContainer/VBoxContainer/MarginContainer/HBoxContainer/PlayerPanelContainer/PlayerContainer" instance=ExtResource("5_c855m")]
-unique_name_in_owner = true
-layout_mode = 2
-
-[node name="PMagicBox" parent="HBoxContainer/VBoxContainer/MarginContainer/HBoxContainer/PlayerPanelContainer/PlayerContainer" instance=ExtResource("5_c855m")]
-unique_name_in_owner = true
-layout_mode = 2
-
-[node name="PAttackBox" parent="HBoxContainer/VBoxContainer/MarginContainer/HBoxContainer/PlayerPanelContainer/PlayerContainer" instance=ExtResource("5_c855m")]
-unique_name_in_owner = true
-layout_mode = 2
-
-[node name="PDefenseBox" parent="HBoxContainer/VBoxContainer/MarginContainer/HBoxContainer/PlayerPanelContainer/PlayerContainer" instance=ExtResource("5_c855m")]
-unique_name_in_owner = true
-layout_mode = 2
-
-[node name="EnemyPanelContainer" type="PanelContainer" parent="HBoxContainer/VBoxContainer/MarginContainer/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="EnemyContainer" type="VBoxContainer" parent="HBoxContainer/VBoxContainer/MarginContainer/HBoxContainer/EnemyPanelContainer"]
+[node name="PlayerContainer" type="VBoxContainer" parent="HBoxContainer/VBoxContainer/MarginContainer/HBoxContainer/PlayerPanelContainer" unique_id=1030614515]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="EHealthBox" parent="HBoxContainer/VBoxContainer/MarginContainer/HBoxContainer/EnemyPanelContainer/EnemyContainer" instance=ExtResource("5_c855m")]
+[node name="PHealthBox" parent="HBoxContainer/VBoxContainer/MarginContainer/HBoxContainer/PlayerPanelContainer/PlayerContainer" unique_id=643180174 instance=ExtResource("5_c855m")]
 unique_name_in_owner = true
 layout_mode = 2
 
-[node name="EMagicBox" parent="HBoxContainer/VBoxContainer/MarginContainer/HBoxContainer/EnemyPanelContainer/EnemyContainer" instance=ExtResource("5_c855m")]
+[node name="PMagicBox" parent="HBoxContainer/VBoxContainer/MarginContainer/HBoxContainer/PlayerPanelContainer/PlayerContainer" unique_id=168422371 instance=ExtResource("5_c855m")]
 unique_name_in_owner = true
 layout_mode = 2
 
-[node name="EAttackBox" parent="HBoxContainer/VBoxContainer/MarginContainer/HBoxContainer/EnemyPanelContainer/EnemyContainer" instance=ExtResource("5_c855m")]
+[node name="PAttackBox" parent="HBoxContainer/VBoxContainer/MarginContainer/HBoxContainer/PlayerPanelContainer/PlayerContainer" unique_id=96059050 instance=ExtResource("5_c855m")]
 unique_name_in_owner = true
 layout_mode = 2
 
-[node name="EDefenseBox" parent="HBoxContainer/VBoxContainer/MarginContainer/HBoxContainer/EnemyPanelContainer/EnemyContainer" instance=ExtResource("5_c855m")]
+[node name="PDefenseBox" parent="HBoxContainer/VBoxContainer/MarginContainer/HBoxContainer/PlayerPanelContainer/PlayerContainer" unique_id=1342662810 instance=ExtResource("5_c855m")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="EnemyPanelContainer" type="PanelContainer" parent="HBoxContainer/VBoxContainer/MarginContainer/HBoxContainer" unique_id=1033065157]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="EnemyContainer" type="VBoxContainer" parent="HBoxContainer/VBoxContainer/MarginContainer/HBoxContainer/EnemyPanelContainer" unique_id=254490991]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="EHealthBox" parent="HBoxContainer/VBoxContainer/MarginContainer/HBoxContainer/EnemyPanelContainer/EnemyContainer" unique_id=853391029 instance=ExtResource("5_c855m")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="EMagicBox" parent="HBoxContainer/VBoxContainer/MarginContainer/HBoxContainer/EnemyPanelContainer/EnemyContainer" unique_id=1776574282 instance=ExtResource("5_c855m")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="EAttackBox" parent="HBoxContainer/VBoxContainer/MarginContainer/HBoxContainer/EnemyPanelContainer/EnemyContainer" unique_id=614036673 instance=ExtResource("5_c855m")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="EDefenseBox" parent="HBoxContainer/VBoxContainer/MarginContainer/HBoxContainer/EnemyPanelContainer/EnemyContainer" unique_id=1376691540 instance=ExtResource("5_c855m")]
 unique_name_in_owner = true
 layout_mode = 2
 
 [connection signal="pressed" from="HBoxContainer/MarginContainer/PanelContainer/VBoxContainer/PlayerActionContainer/ActionContainer/AttackButton" to="." method="_on_attack_button_pressed"]
 [connection signal="pressed" from="HBoxContainer/MarginContainer/PanelContainer/VBoxContainer/PlayerActionContainer/ActionContainer/SkillButton" to="." method="_on_skill_button_pressed"]
 [connection signal="pressed" from="HBoxContainer/MarginContainer/PanelContainer/VBoxContainer/PlayerActionContainer/ActionContainer/PrevailButton" to="." method="_on_prevail_button_pressed"]
-[connection signal="pressed" from="HBoxContainer/VBoxContainer/MarginContainer2/PanelContainer2/HBoxContainer/Control/JumpButton" to="." method="_on_jump_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/MarginContainer2/PanelContainer2/HBoxContainer/Control/VBoxContainer/JumpButton" to="." method="_on_jump_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/MarginContainer2/PanelContainer2/HBoxContainer/Control/VBoxContainer/SurrenderButton" to="." method="_on_surrender_button_pressed"]

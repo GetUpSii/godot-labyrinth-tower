@@ -107,6 +107,10 @@ open_bag={
 ]
 }
 
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
+
 [internationalization]
 
 locale/translations=PackedStringArray("res://translations/dialogue.en.translation", "res://translations/dialogue.zh.translation", "res://translations/game_strings.en.translation", "res://translations/game_strings.zh.translation")

@@ -43,6 +43,7 @@ func set_message_icon() -> void:
 	e_magic_box.set_texture(Global.icon_dict.get("magic"))
 
 @onready var jump_button: Button = %JumpButton
+@onready var surrender_button: Button = %SurrenderButton
 
 func _ready() -> void:
 	set_message_icon()
@@ -102,11 +103,14 @@ func set_characters(_player: Player, _enemy: Character2d, _auto: bool = true) ->
 
 	update_player_ui()
 	update_enemy_ui()
+	surrender_button.hide()
+	surrender_button.disabled = true
 	if enemy.instance.get_template_id() == "sorcerer":
-		#jump_button.disabled = true
-		jump_button.pressed.disconnect(_on_jump_button_pressed)
-		jump_button.pressed.connect(_surrender_battle)
-		jump_button.text = tr("battle_surrender")
+		surrender_button.disabled = false
+		surrender_button.text = tr("battle_surrender")
+		surrender_button.show()
+		surrender_button.pressed.connect(_surrender_battle)
+		
 	
 	player.instance.on_character_ui_update.connect(_on_character_ui_update.bind(player.instance, true))
 	enemy.instance.on_character_ui_update.connect(_on_character_ui_update.bind(enemy.instance, false))
@@ -158,7 +162,11 @@ func _surrender_battle() -> void:
 func _on_jump_button_pressed() -> void:
 	## 检查敌人类型是不是巫师
 	jump_battle()
-	
+
+
+func _on_surrender_button_pressed() -> void:
+	pass # Replace with function body.
+
 
 
 func _on_character_skill_cooldown(skill: SkillInstance) -> void:
