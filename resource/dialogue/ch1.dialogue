@@ -40,7 +40,7 @@ elif Global.end == "surrender":
 ~ end
 do SignalManager.on_set_dialogue_texture.emit("")
 感谢你完成了本游戏，希望你有一场愉快的冒险。
-有任何事宜和评论，请联系我的邮箱：anystarworld@qq.com，或者加我的QQ2056681440，谢谢。
+有任何事宜和评论，请联系我的邮箱：anystarworlds@qq.com，谢谢。
 => END
 
 ~ te
@@ -73,7 +73,7 @@ do SignalManager.on_set_dialogue_texture.emit("")
 恶魔——杰姆；药剂师——莉娜；徘徊的幽灵——无名者；巫师——乌诺；魔塔之主——菲欧娜
 神: 那么到这里，故事就结束了。
 摄像机红灯打过，工厂人瞳孔闪过着属于人类的虹膜色彩
-一行小字浮现："本片未使用AI演员，以保护AI合法权益"
+一行小字浮现："本片未使用AI和机械生命进行表演，以保护合法权益"
 => end
 => END
 
@@ -87,6 +87,7 @@ do SignalManager.on_set_dialogue_texture.emit("")
 ~ he
 do SignalManager.on_set_dialogue_texture.emit("")
 你成功打败了魔塔之主，拿到了白色的钥匙，当你打开门的一刻，你看到一道白光朝你而来
+do SignalManager.on_change_audio_effect.emit("applause")
 那不知名的掌声再次响起，神的声音在你耳畔响起
 do SignalManager.on_set_dialogue_texture.emit("shen")
 神: 恭喜你，你成功打败了魔塔之主，成为了这个世界的英雄

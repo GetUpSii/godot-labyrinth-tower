@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bqmfkccu1csk6"]
+
+[ext_resource type="PackedScene" uid="uid://ddv42ibo4dsp2" path="res://interact/shelf/book_shelf.tscn" id="1_1qeht"]
+
+[node name="BookShelfEmpty" unique_id=1137770626 instance=ExtResource("1_1qeht")]
+dialogue_title = "empty"

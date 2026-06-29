@@ -414,4 +414,4 @@ func _on_end_game(_type: String="die") -> void:
 	clear()
 	await DialogueManager.dialogue_ended
 	game_over_scene.queue_free()
-	get_tree().reload_current_scene()
+	get_tree().change_scene_to_file("res://main.tscn")
