@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://m5x5l20h7w6l"]
+[gd_scene format=3 uid="uid://m5x5l20h7w6l"]
 
 [ext_resource type="Script" uid="uid://c2ujb5sl1s8q3" path="res://main.gd" id="1_kek77"]
 [ext_resource type="PackedScene" uid="uid://b5fkicputla2p" path="res://ui/menu/GameUi.tscn" id="2_1bvp3"]
@@ -12,11 +12,15 @@
 [ext_resource type="AudioStream" uid="uid://pom1t4s6p1i6" path="res://asserts/bgm/crystal-cave-song18.mp3" id="8_5vw27"]
 [ext_resource type="AudioStream" uid="uid://p7sycodaywkt" path="res://asserts/sfx/item/keys_07.ogg" id="11_efxa6"]
 
-[node name="main" type="Node"]
+[ext_resource type="PackedScene" uid="uid://touchcontroller0000" path="res://ui/touch/touch_controller.tscn" id="13_touch"]
+
+[node name="main" type="Node" unique_id=1828206629]
 script = ExtResource("1_kek77")
 start_dialogue = ExtResource("2_5vw27")
 
-[node name="UserInterface" type="CanvasLayer" parent="."]
+[node name="TouchController" parent="." instance=ExtResource("13_touch")]
+
+[node name="UserInterface" type="CanvasLayer" parent="." unique_id=952430334]
 layer = -1
 script = ExtResource("3_kek77")
 switch_to_open = ExtResource("5_4c57u")
@@ -24,17 +28,17 @@ switch_to_walk = ExtResource("5_vivmo")
 bag_switch_to_walk = ExtResource("6_074og")
 walk_switch_to_bag = ExtResource("7_cegan")
 
-[node name="GameUi" parent="UserInterface" instance=ExtResource("2_1bvp3")]
+[node name="GameUi" parent="UserInterface" unique_id=13884374 instance=ExtResource("2_1bvp3")]
 
-[node name="World" type="Node2D" parent="."]
+[node name="World" type="Node2D" parent="." unique_id=1617681140]
 
-[node name="PlayerCreator" parent="." instance=ExtResource("6_272bh")]
+[node name="PlayerCreator" parent="." unique_id=172907447 instance=ExtResource("6_272bh")]
 visible = false
 
-[node name="AudioBackground" type="AudioStreamPlayer" parent="."]
+[node name="AudioBackground" type="AudioStreamPlayer" parent="." unique_id=832588890]
 stream = ExtResource("8_5vw27")
 volume_db = -9.821
 parameters/looping = true
 
-[node name="AudioEffect" type="AudioStreamPlayer" parent="."]
+[node name="AudioEffect" type="AudioStreamPlayer" parent="." unique_id=1398410172]
 stream = ExtResource("11_efxa6")
