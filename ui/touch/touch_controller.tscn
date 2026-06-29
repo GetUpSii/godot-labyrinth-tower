@@ -1,68 +1,65 @@
-[gd_scene load_steps=2 format=4 uid="uid://touchcontroller0000"]
+[gd_scene load_steps=3 format=4 uid="uid://touchcontroller0000"]
 
-[ext_resource type="Script" path="res://ui/touch/touch_controller.gd" id="1_c5khy"]
+[ext_resource type="Script" path="res://ui/touch/touch_controller.gd" id="1_qca4c"]
+[ext_resource type="PackedScene" uid="uid://virtualjoystick000" path="res://ui/touch/virtual_joystick.tscn" id="2_mk8sb"]
 
 [node name="TouchController" type="CanvasLayer"]
-script = ExtResource("1_c5khy")
+script = ExtResource("1_qca4c")
 
-[node name="TouchArea" type="Control" parent="."]
-unique_name_in_owner = true
+[node name="VirtualJoystick" parent="." unique_name_in_owner="true" instance=ExtResource("2_mk8sb")]
+anchor_left = 0.0
+anchor_top = 1.0
+anchor_right = 0.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = -144.0
+offset_right = 136.0
+offset_bottom = -8.0
+
+[node name="ActionButtons" type="VBoxContainer" parent="."]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
+anchors_preset = 12
+anchor_top = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-mouse_filter = 2
-
-[node name="ActionButtons" type="VBoxContainer" parent="TouchArea"]
-layout_mode = 1
-anchors_preset = 11
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 0
-grow_vertical = 0
 size_flags_horizontal = 8
 size_flags_vertical = 8
 theme_override_constants/separation = 8
 
-[node name="Spacer" type="Control" parent="TouchArea/ActionButtons"]
+[node name="Spacer" type="Control" parent="ActionButtons"]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="HBoxContainer" type="HBoxContainer" parent="TouchArea/ActionButtons"]
+[node name="HBoxContainer" type="HBoxContainer" parent="ActionButtons"]
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 0
 
-[node name="SpacerL" type="Control" parent="TouchArea/ActionButtons/HBoxContainer"]
+[node name="SpacerL" type="Control" parent="ActionButtons/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="MenuButton" type="Button" parent="TouchArea/ActionButtons/HBoxContainer"]
+[node name="MenuButton" type="Button" parent="ActionButtons/HBoxContainer"]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(56, 48)
+custom_minimum_size = Vector2(64, 48)
 layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 0
 theme_override_font_sizes/font_size = 14
 text = "菜单"
 modulate = Color(1, 1, 1, 0.7)
 
-[node name="SpacerM" type="Control" parent="TouchArea/ActionButtons/HBoxContainer"]
+[node name="SpacerM" type="Control" parent="ActionButtons/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="BagButton" type="Button" parent="TouchArea/ActionButtons/HBoxContainer"]
+[node name="BagButton" type="Button" parent="ActionButtons/HBoxContainer"]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(56, 48)
+custom_minimum_size = Vector2(64, 48)
 layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 0
 theme_override_font_sizes/font_size = 14
 text = "背包"
 modulate = Color(1, 1, 1, 0.7)
 
-[node name="SpacerR" type="Control" parent="TouchArea/ActionButtons/HBoxContainer"]
+[node name="SpacerR" type="Control" parent="ActionButtons/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
