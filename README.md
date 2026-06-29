@@ -16,7 +16,7 @@ Godot3000 是一款迷宫探索式 RPG（魔塔类型），包含战斗系统、
 ### 运行
 1. 克隆本仓库：
    ```bash
-   git clone git@github.com:GetUpSii/GodotGameMota3000.git
+   git clone git@github.com:GetUpSii/godot-labyrinth-tower.git
    ```
 2. 使用 Godot 4.7 打开项目根目录
 3. 点击运行（或按 F5）
