@@ -1,7 +1,7 @@
 [gd_resource type="Theme" format=3 uid="uid://b88jg1squog7p"]
 
 [ext_resource type="Texture2D" uid="uid://5wtoalyfl7e2" path="res://asserts/image/box/border_box.png" id="1_lji2a"]
-[ext_resource type="FontFile" uid="uid://cugpmt8jvhsn8" path="res://asserts/font/ark-pixel-12px-proportional-latin.ttf" id="4_d0pn7"]
+[ext_resource type="FontFile" uid="uid://1etteys335aa" path="res://asserts/font/ark-pixel-12px-proportional-latin.ttf" id="4_d0pn7"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r128i"]
 content_margin_left = 4.0
