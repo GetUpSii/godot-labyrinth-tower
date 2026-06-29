@@ -1,16 +1,18 @@
 extends CanvasLayer
 
 ## 手机触屏控制器
-## 可见的虚拟摇杆 + 操作按钮
-## 模拟键盘事件，让现有 GUIDE 输入系统无缝工作
+## 检测触摸手势，模拟键盘事件，让现有 GUIDE 输入系统无缝工作
 ##
 ## 工作方式：
-## - 拖动虚拟摇杆 → 模拟 WASD 按键 → GUIDE 触发 move action → 玩家移动
+## - 滑动屏幕 → 模拟 WASD 按键 → GUIDE 触发 move action → 玩家移动
 ## - 点击菜单按钮 → 模拟 Escape → 打开菜单
 ## - 点击背包按钮 → 模拟 I → 打开背包
 
 ## 触屏控制开关（桌面端自动隐藏）
 @export var enabled: bool = true
+
+## 滑动触发阈值（像素）
+@export var swipe_threshold: float = 30.0
 
 ## 连续移动：长按时是否持续移动
 @export var enable_repeat: bool = true
@@ -18,15 +20,19 @@ extends CanvasLayer
 ## 重复移动间隔（秒）
 @export var repeat_interval: float = 0.2
 
+# 触摸状态
+var _touch_id: int = -1
+var _touch_start: Vector2 = Vector2.ZERO
+var _touch_current: Vector2 = Vector2.ZERO
 var _current_direction: Vector2 = Vector2.ZERO
-var _last_key: int = -1
+var _is_touching: bool = false
 var _repeat_timer: float = 0.0
+var _has_moved: bool = false
 
-# 节点引用
-@onready var joystick: VirtualJoystick = %VirtualJoystick
+# 按钮引用
 @onready var menu_button: Button = %MenuButton
 @onready var bag_button: Button = %BagButton
-
+@onready var touch_area: Control = %TouchArea
 
 func _ready() -> void:
 	# 平台检测：非移动端隐藏触屏控制
@@ -34,66 +40,67 @@ func _ready() -> void:
 		hide()
 		enabled = false
 		set_process(false)
+		set_process_input(false)
 		return
-	
-	# 连接摇杆信号
-	joystick.direction_changed.connect(_on_joystick_direction)
-	joystick.activated.connect(_on_joystick_activated)
-	joystick.deactivated.connect(_on_joystick_deactivated)
 	
 	# 连接按钮信号
 	menu_button.pressed.connect(_on_menu_pressed)
 	bag_button.pressed.connect(_on_bag_pressed)
 
 
-func _process(delta: float) -> void:
-	if not enabled or not enable_repeat:
+func _input(event: InputEvent) -> void:
+	if not enabled:
 		return
 	
-	# 长按摇杆时持续移动
-	if _current_direction != Vector2.ZERO:
+	# 触摸开始
+	if event is InputEventScreenTouch and event.pressed:
+		_touch_id = event.index
+		_touch_start = event.position
+		_touch_current = event.position
+		_is_touching = true
+		_current_direction = Vector2.ZERO
+		_has_moved = false
+		_repeat_timer = 0.0
+		
+		# 点按（非滑动）触发交互
+		_release_all_keys()
+		return
+	
+	# 触摸结束
+	if event is InputEventScreenTouch and not event.pressed and event.index == _touch_id:
+		_is_touching = false
+		_release_all_keys()
+		_touch_id = -1
+		_current_direction = Vector2.ZERO
+		return
+	
+	# 触摸拖动（滑动）
+	if event is InputEventScreenDrag and event.index == _touch_id:
+		_touch_current = event.position
+		var delta: Vector2 = _touch_current - _touch_start
+		
+		if delta.length() >= swipe_threshold and not _has_moved:
+			_has_moved = true
+			# 确定滑动方向
+			if abs(delta.x) > abs(delta.y):
+				_current_direction = Vector2.RIGHT if delta.x > 0 else Vector2.LEFT
+			else:
+				_current_direction = Vector2.DOWN if delta.y > 0 else Vector2.UP
+			
+			# 模拟按键 + 立即释放（触发 Pulse 一次）
+			_simulate_key_press(_direction_to_key(_current_direction))
+
+
+func _process(delta: float) -> void:
+	if not enabled or not _is_touching or not enable_repeat:
+		return
+	
+	# 连续移动：长按时持续触发
+	if _has_moved:
 		_repeat_timer += delta
 		if _repeat_timer >= repeat_interval:
 			_repeat_timer = 0.0
 			_simulate_key_press(_direction_to_key(_current_direction))
-
-
-func _on_joystick_activated() -> void:
-	_repeat_timer = 0.0
-
-
-func _on_joystick_deactivated() -> void:
-	_current_direction = Vector2.ZERO
-	_last_key = -1
-	_repeat_timer = 0.0
-
-
-func _on_joystick_direction(dir: Vector2) -> void:
-	if dir == Vector2.ZERO:
-		_current_direction = Vector2.ZERO
-		_last_key = -1
-		return
-	
-	# 将摇杆方向映射到 4 个方向
-	var snapped_dir: Vector2 = _snap_direction(dir)
-	if snapped_dir == _current_direction:
-		return  # 方向没变，不重复触发
-	
-	_current_direction = snapped_dir
-	_repeat_timer = 0.0
-	_simulate_key_press(_direction_to_key(_current_direction))
-
-
-## 将任意方向映射到上下左右
-func _snap_direction(dir: Vector2) -> Vector2:
-	if dir.length() < 0.1:
-		return Vector2.ZERO
-	
-	# 判断哪个轴更 dominant
-	if abs(dir.x) > abs(dir.y):
-		return Vector2.RIGHT if dir.x > 0 else Vector2.LEFT
-	else:
-		return Vector2.DOWN if dir.y > 0 else Vector2.UP
 
 
 func _direction_to_key(dir: Vector2) -> int:
@@ -126,19 +133,17 @@ func _simulate_key_press(keycode: int) -> void:
 	Input.parse_input_event(release_event)
 
 
+func _release_all_keys() -> void:
+	for key in [KEY_W, KEY_A, KEY_S, KEY_D, KEY_ESCAPE, KEY_I]:
+		var event = InputEventKey.new()
+		event.keycode = key
+		event.pressed = false
+		Input.parse_input_event(event)
+
+
 func _on_menu_pressed() -> void:
-	var event = InputEventKey.new()
-	event.keycode = KEY_ESCAPE
-	event.pressed = true
-	Input.parse_input_event(event)
-	event.pressed = false
-	Input.parse_input_event(event)
+	_simulate_key_press(KEY_ESCAPE)
 
 
 func _on_bag_pressed() -> void:
-	var event = InputEventKey.new()
-	event.keycode = KEY_I
-	event.pressed = true
-	Input.parse_input_event(event)
-	event.pressed = false
-	Input.parse_input_event(event)
+	_simulate_key_press(KEY_I)
