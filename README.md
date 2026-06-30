@@ -21,10 +21,6 @@ Godot3000 是一款迷宫探索式 RPG（魔塔类型），包含战斗系统、
 2. 使用 Godot 4.7 打开项目根目录
 3. 点击运行（或按 F5）
 
-### 导出
-项目提供了导出脚本：
-- Windows: `export_windows.bat`
-- Linux: `export/export_presets.cfg` 及 `build_linux.bat`
 
 ## 游戏攻略
 
@@ -45,14 +41,13 @@ Godot3000 是一款迷宫探索式 RPG（魔塔类型），包含战斗系统、
 - **BE** — 死亡结局
 
 > ⚠️ 完成游戏会删除记忆数据和强化数据，需要重新开始
-
-### 已知 Bug
-- 读档后丢失强化属性数据
+>
+> 💡 **关于强化属性：** 献祭获得的强化属性（攻击/防御加成）不会随存档保留，这是有意为之的设计——鼓励玩家少存档读档，体验一命通关的挑战。完成游戏后所有强化数据也会重置。
 
 ## 资源来源
 
 - 美术素材：[Kenney 1-Bit Pack](license/1_bit_pack_License.txt) (CC0)
-- 字体：[Vonwaon Bitmap](license/VonwaonBitmap_license.txt) by Haoyu Qiu (CC0)
+- 字体：[Ark Pixel](license/ArkPixel_license.txt) by TakWolf（方舟像素字体，SIL Open Font License 1.1）
 - 音效：[Kenney RPG Sound Pack](license/rpg_sound_license.txt) (CC0)
 - 游戏动画：[Warped Shooting FX](license/warped_shooting_fx_license.txt) by Luis Zuno / ansimuz
 
